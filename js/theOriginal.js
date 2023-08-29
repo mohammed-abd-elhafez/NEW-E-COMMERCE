@@ -144,9 +144,9 @@ function lazyLoading() {
     img.setAttribute("loading", "lazy");
     img.alt = "fitness clothes, gym clothes"
   });
-  // let firstImg = document.querySelector(".first-img img");
+  let firstImg = document.querySelector(".first-img img");
 
-  // firstImg.removeAttribute("loading");
+  firstImg.removeAttribute("loading");
 };
 // lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
@@ -883,7 +883,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (target.classList.contains("next-step")) {
       stepsIndex++;
       manageHistory();
-
       handleStepsRendering(stepsIndex);
     } else if (target.classList.contains("prev-step")) {
       stepsIndex--;
@@ -892,8 +891,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   if (basket.length !== 0) {
-    stepsIndex = JSON.parse(localStorage.getItem("step"));
-    console.log(stepsIndex)
+    stepsIndex = JSON.parse(localStorage.getItem("step")) || 0;
 
     if (stepsIndex > 0) {
       fullBag.classList.toggle("show");
