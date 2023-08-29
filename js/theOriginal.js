@@ -144,9 +144,9 @@ function lazyLoading() {
     img.setAttribute("loading", "lazy");
     img.alt = "fitness clothes, gym clothes"
   });
-  let firstImg = document.querySelector(".first-img img");
+  // let firstImg = document.querySelector(".first-img img");
 
-  firstImg.removeAttribute("loading");
+  // firstImg.removeAttribute("loading");
 };
 // lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
