@@ -1,0 +1,76 @@
+To make the slider scrollable by touch on phones, you can utilize the touch events provided by JavaScript. Here's an example of how you can modify the existing code to enable touch scrolling:
+
+```javascript
+let previousText = document.querySelector(".previous");
+let nextText = document.querySelector(".next");
+let textContainer = document.querySelector(".text-container");
+let textArray = Array.from(document.querySelectorAll(".text p"));
+let current = 2;
+
+addActive();
+
+function removeActive(array) {
+  array.forEach(element => {
+    element.classList.remove("active");
+  });
+}
+
+function addActive() {
+  removeActive(textArray);
+  textArray[current - 1].classList.add("active");
+}
+
+nextText.addEventListener("click", () => {
+  current = current === textArray.length ? 1 : current + 1;
+  addActive();
+});
+
+previousText.addEventListener("click", () => {
+  current = current !== 1 ? current - 1 : textArray.length;
+  addActive();
+});
+
+// Touch Event Handling
+let touchStartX = 0;
+let touchEndX = 0;
+
+textContainer.addEventListener("touchstart", event => {
+  touchStartX = event.touches[0].clientX;
+});
+
+textContainer.addEventListener("touchmove", event => {
+  touchEndX = event.touches[0].clientX;
+});
+
+textContainer.addEventListener("touchend", () => {
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50; // Adjust this value as needed
+
+  if (touchStartX - touchEndX > swipeThreshold) {
+    // Swiped left, move to next slide
+    current = current === textArray.length ? 1 : current + 1;
+    addActive();
+  } else if (touchEndX - touchStartX > swipeThreshold) {
+    // Swiped right, move to previous slide
+    current = current !== 1 ? current - 1 : textArray.length;
+    addActive();
+  }
+}
+```
+
+In the updated code:
+- The `textContainer` variable is introduced to target the container element that wraps the text slides.
+- Touch event listeners (`touchstart`, `touchmove`, `touchend`) are added to the `textContainer` element to capture touch input.
+- When a touch event occurs, the `touchstart` event records the starting X position of the touch, the `touchmove`
+ event continuously updates the ending X position of the touch, and the `touchend` event triggers the `handleSwipe` function.
+
+- Inside the `handleSwipe` function, you can adjust the `swipeThreshold` value to determine 
+the minimum swipe distance required to trigger a slide change. This prevents accidental swipes from triggering unintended actions.
+
+- Depending on the direction and distance of the swipe, the `current` value is updated accordingly, and the `addActive`
+ function is called to apply the "active" class to the appropriate text element.
+
+With these modifications, the slider should respond to touch swipes on mobile devices, allowing users to navigate through the text slides by swiping left or right.

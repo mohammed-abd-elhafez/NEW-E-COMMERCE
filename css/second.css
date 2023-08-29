@@ -1,0 +1,382 @@
+/* start global rules */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+:root {
+    /* --main-color: #1a237e; */
+    --main-color: #fafafa;
+    --secondary-color: #000;
+    /* --secondary-color: #fafafa; */
+    --main-alt-color: #1787e0;
+    --accent-color: #0e75ca;
+    --main-transition-duration: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-back-ground: #ECECEC;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+
+a {
+    text-decoration: none;
+
+}
+
+li {
+    list-style: none;
+}
+
+
+/* end global rules */
+
+/* start navbar */
+/* .navbar {
+    background-color: #dbdbdb44 !important;
+}
+
+.brand {
+    color: var(--secondary-color);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand:hover {
+    color: var(--accent-color);
+}
+
+.navbar-links a {
+    color: var(--secondary-color);
+}
+
+.navbar-links a:hover {
+    color: var(--accent-color);
+} */
+
+/* end navbar */
+
+
+
+/* end landing*/
+
+
+/* start accordion */
+/* .example {
+    width: 0;
+    height: 0;
+    background-color: rgba(5, 56, 69, 0.995);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+}
+
+.example>div {
+    overflow: hidden;
+}
+
+.example.click {
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr;
+
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+}
+
+.accordion-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+}
+
+.accordion-content>div {
+    overflow: hidden;
+}
+
+/* other styles */
+
+
+/* 
+.wrapper {
+    width: min(65ch, 100% - 4rem);
+    margin-inline: auto;
+}
+
+.accordion {
+    background: #121212;
+    color: #effeef;
+    padding: 1rem;
+}
+
+.accordion-panel {
+    padding: 1rem;
+    border: 1px solid;
+}
+
+.accordion h2 {
+    position: relative;
+}
+
+.accordion-trigger {
+    background: transparent;
+    border: 0;
+    font: inherit;
+    color: inherit;
+}
+
+.accordion-trigger::before,
+.accordion-trigger::after {
+    position: absolute;
+    right: 1em;
+    content: "";
+    display: block;
+    width: 1em;
+    height: 5px;
+    background: currentcolor;
+    transition: transform 500ms;
+}
+
+.accordion-trigger::after {
+    rotate: 90deg;
+    translate: 0 -1.2em;
+}
+
+.accordion-trigger[aria-expanded="true"]::before,
+.accordion-trigger[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+} */
+
+
+/* ************* */
+
+
+
+
+
+
+.container .title {
+    display: flex;
+    justify-content: center;
+}
+
+.container .title button {
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 10px auto;
+}
+
+.drop-down-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.drop-down-content>div {
+    overflow: hidden;
+}
+
+.drop-down-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+}
+
+/* end accordion */
+
+.the-header {
+    display: flex;
+    height: fit-content;
+}
+
+.the-header>* {
+    margin: 0 10px;
+}
+
+.the-link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: #777;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.the-drop-down.active>.the-link,
+.the-link:hover {
+    color: #000 !important;
+}
+
+.the-drop-down {
+    position: relative;
+}
+
+.the-dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 200ms ease-in-out;
+}
+
+.the-dropdown-menu.active {
+    opacity: 1;
+}
+
+.the-drop-down.active>.the-link+.the-dropdown-menu {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: auto;
+
+}
+
+
+/* ************************************************************************* */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #34495e;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+@media(max-width:767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+
+
+/* ********************************************************* */
+
+.my-try {
+    padding: 5rem 2rem;
+}
+
+.my-try .content-container {
+    margin: 5rem auto;
+}
+
+.my-try .title {
+    font-size: 1.6rem;
+    position: relative;
+    text-transform: uppercase;
+    background-color: #0e75ca;
+    padding: .5rem;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.my-try .title::before {
+    content: "+";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.3rem;
+}
+
+.my-try .content {
+    background-color: #ffff;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    overflow-y: auto;
+    transition: .5s;
+
+}
+
+.my-try .content-container.active .content {
+    height: fit-content;
+    padding: 1rem;
+
+}
+.my-try .content-container.active .title::before {
+content: "-";
+}
+/* Hide default disclosure triangle for various browser vendors */
+summary {
+    list-style: none;
+}
