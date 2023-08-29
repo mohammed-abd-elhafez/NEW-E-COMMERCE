@@ -849,26 +849,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // #############################################################
 
-// start cart summary toggler
-// document.addEventListener("DOMContentLoaded", function () {
-//     let summaryToggler = document.querySelector(".mobile-summary-toggler .mobile-summary-title");
-//     let toggledCards = document.querySelector(".checkout-product-info .checkout-cards");
-//     let toggledSummary = document.querySelector(".checkout-product-info .checkout-summary");
-//     let theChevron = document.querySelector(".mobile-summary-toggler .the-chevron");
-//     let theMobileSummaryTitle1 = document.querySelector(".mobile-summary-title .title span:nth-child(1)")
-//     let theMobileSummaryTitle2 = document.querySelector(".mobile-summary-title .title span:nth-child(2)")
 
 
-//     summaryToggler.addEventListener("click", () => {
-//         toggledCards.classList.toggle("show");
-//         toggledSummary.classList.toggle("show");
-//         theChevron.classList.toggle("rotate");
-//         theMobileSummaryTitle1.classList.toggle("hide");
-//         theMobileSummaryTitle2.classList.toggle("show");
-//     });
-
-
-// });
 // end cart summary toggler
 
 // start steps logic
@@ -2086,7 +2068,7 @@ function renderStepFour(dataArr, summaryData) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  mainStepsContainer.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
     const target = event.target;
     const title = target.closest(".mobile-summary-toggler .mobile-summary-title")
     if (title) {
@@ -2102,7 +2084,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  mainStepsContainer.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
     const target = event.target;
     const summary = target.closest(".full-bag .cart-summary .check-out-help summary");
     if (summary) {
@@ -2247,3 +2229,5 @@ function renderSelectOptions() {
 
 
 
+
+                     
