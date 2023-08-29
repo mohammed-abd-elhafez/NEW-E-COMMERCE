@@ -15,6 +15,7 @@ viewFullBagBtn.forEach((btn) => {
     closeSideCart();
     // history.pushState({ overlay: true }, null, '');
     manageHistory();
+    handleStepsRendering(stepsIndex);
   });
 })
 // viewFullBagBtn.addEventListener("click", () => {
@@ -144,9 +145,9 @@ function lazyLoading() {
     img.setAttribute("loading", "lazy");
     img.alt = "fitness clothes, gym clothes"
   });
-  let firstImg = document.querySelector(".first-img img");
+  // let firstImg = document.querySelector(".first-img img");
 
-  firstImg.removeAttribute("loading");
+  // firstImg.removeAttribute("loading");
 };
 // lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
@@ -738,7 +739,7 @@ function calculateTotalPrice() {
         e.textContent = `${total} $`;
       })
     }
-  });
+  })
 
   return total;
 }
@@ -875,9 +876,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 let stepsIndex = 0;
-let mainStepsContainer = document.querySelector(".main-steps-container");
 
 document.addEventListener("DOMContentLoaded", () => {
+  let mainStepsContainer = document.querySelector(".main-steps-container");
+
   mainStepsContainer.addEventListener("click", (event) => {
     const target = event.target;
     if (target.classList.contains("next-step")) {
