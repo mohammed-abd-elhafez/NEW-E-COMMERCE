@@ -876,9 +876,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 let stepsIndex = 0;
+let mainStepsContainer = document.querySelector(".main-steps-container");
 
 document.addEventListener("DOMContentLoaded", () => {
-  let mainStepsContainer = document.querySelector(".main-steps-container");
 
   mainStepsContainer.addEventListener("click", (event) => {
     const target = event.target;
