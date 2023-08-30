@@ -86,12 +86,12 @@ let rightProducts = document.querySelectorAll(".products-container .product.righ
 let observer = new IntersectionObserver(entries => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("show", entry.isIntersecting);
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target);
-    }
+    // if (entry.isIntersecting) {
+    //   observer.unobserve(entry.target);
+    // }
   })
 }, {
-  threshold: 0.5,
+  threshold: 0.2,
 });
 
 leftProducts.forEach((product) => {
