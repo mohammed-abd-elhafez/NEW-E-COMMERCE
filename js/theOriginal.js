@@ -2119,7 +2119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // end steps logic
 
 document.addEventListener("keydown", (e) => {
-  console.log(e.code)
+  // console.log(e.code)
   if (e.code === "KeyZ") {
     // document.body.innerHTML = ""
     let video = `<div class="m-5 d-flex justify-content-center align-items-center the-video"><video src="Videos/Videoohat_1641083359550898185(234P).mp4" autoplay></video>
