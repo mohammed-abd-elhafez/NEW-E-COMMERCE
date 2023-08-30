@@ -53,6 +53,8 @@ returnToPage.addEventListener("click", () => {
   body.className = "";
   stepsIndex = 0;
   console.log(stepsIndex)
+    window.localStorage.setItem("step", stepsIndex);
+
   // stopBodyScroll();
   // history.replaceState(null, null, '');
 
