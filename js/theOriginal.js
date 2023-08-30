@@ -1,5 +1,6 @@
 "use strict"
 // debugger;
+console.log("please don't press on ||<<   Z   >>||");
 
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
