@@ -1,6 +1,6 @@
 "use strict"
 // debugger;
-console.log("please don't press on ||<<   Z   >>||");
+// console.log("%cUNDER ANY SITUATION DONT PRESS ||<<   Z   >>||", " color: red; font-size: 20px; text=align: center;");
 
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
@@ -52,12 +52,8 @@ returnToPage.addEventListener("click", () => {
   hideNewsBar();
   body.className = "";
   stepsIndex = 0;
-  console.log(stepsIndex)
-    window.localStorage.setItem("step", stepsIndex);
-
-  // stopBodyScroll();
-  // history.replaceState(null, null, '');
-
+  window.localStorage
+  window.localStorage.setItem("step", stepsIndex);
 
 });
 
@@ -73,7 +69,7 @@ function closeSideCart() {
     mainCart.classList.remove("open");
     shoppingCart.classList.remove("animate");
     shoppingCart.classList.remove("show");
-    shoppingCart.classList.remove("show-pc");
+    // shoppingCart.classList.remove("show-pc");
   }, 700);
 }
 
@@ -92,7 +88,8 @@ let observer = new IntersectionObserver(entries => {
   })
 }, {
   threshold: 0.1,
-});
+}
+);
 
 leftProducts.forEach((product) => {
   observer.observe(product);
@@ -129,13 +126,6 @@ function setLinkAttr(arr) {
   arr.forEach((link) => {
     link.setAttribute("aria-label", "link");
     link.href = "temp.html"
-    // console.log(link)
-    if (link.href == "#") {
-      console.log("true")
-    } else if (link.href.length === 0) {
-      link.href = "temp.html"
-
-    }
     // link.href = "temp.html"
   });
 };
@@ -148,9 +138,9 @@ function lazyLoading() {
     img.setAttribute("loading", "lazy");
     img.alt = "fitness clothes, gym clothes"
   });
-  // let firstImg = document.querySelector(".first-img img");
+  let firstImg = document.querySelector(".first-img img");
 
-  // firstImg.removeAttribute("loading");
+  firstImg.removeAttribute("loading");
 };
 // lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
@@ -499,27 +489,28 @@ let totalPrice = document.querySelectorAll(".total-price");
 
 
 let mainCart = document.querySelector(".shopping-cart")
-cartToggler.addEventListener("click", () => {
+cartToggler.addEventListener("click", showSideCart);
+function showSideCart() {
   shoppingCart.classList.toggle("show");
-  shoppingCart.classList.toggle("show-pc");
   mainCart.classList.toggle("open");
   document.body.classList.toggle("stop")
-});
 
-cartCloser.addEventListener("click", () => {
+}
+cartCloser.addEventListener("click", hideSideCart);
+
+function hideSideCart() {
   shoppingCart.classList.toggle("animate");
   document.body.classList.remove("stop");
 
   setTimeout(() => {
     mainCart.classList.remove("open");
     shoppingCart.classList.remove("show");
-    shoppingCart.classList.remove("show-pc");
     shoppingCart.classList.remove("animate");
 
-  }, 700);
+  }, 400);
+}
 
 
-});
 
 let theCards = document.querySelectorAll(".user-items-cards");
 let products = document.querySelectorAll(".products-container .product");
@@ -587,36 +578,143 @@ function extractCartProductsData(arr) {
 addNewItemsToLocalStorage();
 function addNewItemsToLocalStorage() {
   products.forEach((e) => {
-    e.querySelector(".quick-add-icon").addEventListener("click", function () {
-      if (basket.length !== 0) {
+    e.querySelectorAll(".quick-add-container .sizes span").forEach((size) => {
+      size.addEventListener("click", function () {
+        if (basket.length !== 0) {
 
-        let search = basket.find((x) => x.id === e.id) || [];
-        if (search.length !== 0) {
-          search.quantity++;
+          let search = basket.find((x) => x.id === e.id) || [];
+
+          if (search.length !== 0) {
+            // old code
+            // search.quantity++;
+            // ***********************
+
+            console.log(size)
+            console.log(search.size)
+            if (size.textContent === search.size) {
+              search.quantity++;
+
+            } else {
+              let text;
+              if (confirm("SET A NEW ORDER WITH DIFFERENT SIZE : OK / UPDATE THE PRODUCT SIZE : CANCEL") == true) {
+                deleteItemFromLocalStorage(e.id);
+                basket.push({
+                  id: e.id,
+                  quantity: 1,
+                  size: size.textContent
+                });
+              } else {
+                let itemId = size.closest("article").id
+                basket.map((x) => {
+                  if (x.id === itemId) {
+
+                    let quantity = x.quantity;
+                    let newSize = size.textContent
+                    let prevId = x.id
+
+                    deleteItemFromLocalStorage(x.id);
+
+                    basket.push({
+                      id: prevId,
+                      quantity: quantity,
+                      size: newSize
+                    });
+
+                  }
+
+                })
+              }
+            }
+
+
+          } else {
+            basket.push({
+              id: e.id,
+              quantity: 1,
+              size: size.textContent
+            });
+          }
 
         } else {
-          basket.push({
+          basket = [{
             id: e.id,
-            quantity: 1
-          });
+            quantity: 1,
+            size: size.textContent
+          }];
+          // document.proto
         }
 
-      } else {
-        basket = [{
-          id: e.id,
-          quantity: 1
-        }];
-      }
+        window.localStorage.setItem("productData", JSON.stringify(basket));
+        createCartCards();
+        calculateTotalPrice();
+        emptyCart();
+        showSideCart();
 
-      window.localStorage.setItem("productData", JSON.stringify(basket));
-      createCartCards();
-      calculateTotalPrice();
-      emptyCart();
+      });
+    })
+    // e.querySelector(".quick-add-icon").addEventListener("click", function () {
+    //   if (basket.length !== 0) {
 
-    });
+    //     let search = basket.find((x) => x.id === e.id) || [];
+    //     if (search.length !== 0) {
+    //       search.quantity++;
+
+    //     } else {
+    //       basket.push({
+    //         id: e.id,
+    //         quantity: 1
+    //       });
+    //     }
+
+    //   } else {
+    //     basket = [{
+    //       id: e.id,
+    //       quantity: 1
+    //     }];
+    //   }
+
+    //   window.localStorage.setItem("productData", JSON.stringify(basket));
+    //   createCartCards();
+    //   calculateTotalPrice();
+    //   emptyCart();
+
+    // });
 
   });
 };
+
+// function addNewItemsToLocalStorage() {
+//   products.forEach((e) => {
+//     e.querySelector(".quick-add-icon").addEventListener("click", function () {
+//       if (basket.length !== 0) {
+
+//         let search = basket.find((x) => x.id === e.id) || [];
+//         if (search.length !== 0) {
+//           search.quantity++;
+
+//         } else {
+//           basket.push({
+//             id: e.id,
+//             quantity: 1
+//           });
+//         }
+
+//       } else {
+//         basket = [{
+//           id: e.id,
+//           quantity: 1
+//         }];
+//       }
+
+//       window.localStorage.setItem("productData", JSON.stringify(basket));
+//       createCartCards();
+//       calculateTotalPrice();
+//       emptyCart();
+
+//     });
+
+//   });
+// };
 
 
 // call the function when dom loaded because create the cards if there is any data in the local storage
@@ -643,10 +741,9 @@ function createCartCards() {
 
     data.map((x) => {
 
-      let { id, quantity } = x;
+      let { id, quantity, size } = x;
       let search = productDataArray.find((x) => x.id === id);
       let newSearch = cartDataArray.some((x) => x.id === id);
-
       if (newSearch) {
         let theChosenEle = document.querySelectorAll(`.user-items-cards #${search.id}`);
         theChosenEle.forEach((e) => {
@@ -670,7 +767,10 @@ function createCartCards() {
 <div class="item-title">
 <p class="item-name">${search.name}</p>
 <p class="item-desc">${search.desc}</p>
-<p class="item-color">${search.color}</p>
+<div class="item-color">
+<div class="color">${search.color}</div>
+<span class="item-size">${size}</span>
+</div>
 <span class="item-price">${search.price}</span>
 </div>
 
@@ -722,13 +822,22 @@ function createCartCards() {
 }
 
 
+let itemsCount = document.querySelector(".shopping-cart-toggler .count")
 calculateTotalPrice();
+
 function calculateTotalPrice() {
   let itemsNumber = document.querySelector(".items-numbers .items span");
-  let cartProducts = document.querySelectorAll(".user-items-cards .user-item-card");
+  let cartProducts = document.querySelectorAll(".shopping-cart .user-item-card");
   let total = 0;
   if (cartProducts.length !== 0) {
-    itemsNumber.textContent = cartProducts.length / 2;
+    itemsCount.style.display = 'block'
+    itemsNumber.textContent = cartProducts.length;
+    itemsCount.textContent = cartProducts.length;
+
+  } else {
+    itemsCount.style.display = 'none'
+    itemsCount.textContent = 0;
+
   }
 
   basket.forEach((item) => {
@@ -743,7 +852,6 @@ function calculateTotalPrice() {
       })
     }
   })
-
   return total;
 }
 
@@ -764,6 +872,13 @@ function emptyCart() {
     });
     checkOut.classList.remove("hide");
   } else if (basket.length === 0) {
+    if (mainStepsContainer.querySelector(".check-out-progress")) {
+      mainStepsContainer.querySelector(".check-out-progress").remove();
+      mainStepsContainer.querySelector(".mobile-summary").remove();
+      mainStepsContainer.querySelector(".cart-summary").remove();
+    }
+
+
     emptyCartShow.forEach((e) => {
       e.classList.add("show")
     });
@@ -798,7 +913,7 @@ function deleteItemFromCart() {
 
         deleteItemFromLocalStorage(id);
         calculateTotalPrice();
-        emptyCart();
+        emptyCart()
       }
     }
   });
@@ -829,7 +944,6 @@ function deleteItemFromCart() {
 // }
 
 
-
 function deleteItemFromLocalStorage(id) {
   let data = JSON.parse(window.localStorage.getItem("productData")) || [];
   let index = data.findIndex((obj) => obj.id === id);
@@ -845,15 +959,33 @@ function deleteItemFromLocalStorage(id) {
 document.addEventListener("DOMContentLoaded", () => {
   emptyCart();
   deleteItemFromCart();
-  // calculateTotalPrice();
+  calculateTotalPrice();
 });
 
 
 
 // #############################################################
 
+// start cart summary toggler
+// document.addEventListener("DOMContentLoaded", function () {
+//     let summaryToggler = document.querySelector(".mobile-summary-toggler .mobile-summary-title");
+//     let toggledCards = document.querySelector(".checkout-product-info .checkout-cards");
+//     let toggledSummary = document.querySelector(".checkout-product-info .checkout-summary");
+//     let theChevron = document.querySelector(".mobile-summary-toggler .the-chevron");
+//     let theMobileSummaryTitle1 = document.querySelector(".mobile-summary-title .title span:nth-child(1)")
+//     let theMobileSummaryTitle2 = document.querySelector(".mobile-summary-title .title span:nth-child(2)")
 
 
+//     summaryToggler.addEventListener("click", () => {
+//         toggledCards.classList.toggle("show");
+//         toggledSummary.classList.toggle("show");
+//         theChevron.classList.toggle("rotate");
+//         theMobileSummaryTitle1.classList.toggle("hide");
+//         theMobileSummaryTitle2.classList.toggle("show");
+//     });
+
+
+// });
 // end cart summary toggler
 
 // start steps logic
@@ -896,10 +1028,12 @@ document.addEventListener("DOMContentLoaded", () => {
 function extractCardsDataFromSideCart(arr) {
   if (arr.length !== 0) {
     return Array.from(arr).map((e) => ({
+
       id: e.id,
       img: e.querySelector(".item-img img").src,
       name: e.querySelector(".item-name").textContent,
-      color: e.querySelector(".item-color").textContent,
+      color: e.querySelector(".item-color .color").textContent,
+      size: e.querySelector(".item-size").textContent,
       price: parseInt(e.querySelector(".item-price").textContent.replace("$", "")),
       description: e.querySelector(".item-desc").textContent,
       quantity: parseInt(e.querySelector("label .span").textContent),
@@ -988,14 +1122,7 @@ function handleStepsRendering(stepNumber) {
 
   // handleSteps()
 }
-function removeFooter() {
-  let bagFooter = document.querySelector(".full-bag .footer");
-  bagFooter.style.display = "none"
-}
-function showFooter() {
-  let bagFooter = document.querySelector(".full-bag .footer");
-  bagFooter.style.display = "block"
-}
+
 
 function renderStepOne(dataArr, summaryData) {
 
@@ -1134,28 +1261,13 @@ function renderStepOne(dataArr, summaryData) {
     </div>
   </div>
 
-  <div class="empty-cart">
-    <div class="empty-cart-container">
-      <div class="img">
-        <img src="IMGS/empty-bag.svg" alt="">
-      </div>
-
-      <h5>YOUR BAG IS EMPTY</h5>
-      <p>There are no products in your bag</p>
-      <button>shop men</button>
-      <button>shop women</button>
-
-    </div>
-    
-
-  </div>
+  
 
  </div> `;
 
   let cardsContainer = document.querySelector(".check-out-step.step-1 .user-items-cards");
   dataArr.map((x) => {
-
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     cardsContainer.innerHTML += ` <div class="user-item-card" id="${id}">
         <div class="item-img">
           <img
@@ -1168,7 +1280,12 @@ function renderStepOne(dataArr, summaryData) {
           <div class="item-title">
             <p class="item-name">${name}</p>
             <p class="item-desc">${description}</p>
-            <p class="item-color">${color}</p>
+
+            <div class="item-color">
+        <div class="color">${color}</div>
+        <span class="item-size">${size}</span>
+        </div>
+
             <span class="item-price">$${price}</span>
           </div>
 
@@ -1452,7 +1569,7 @@ return to your bag
   let theContainer = document.querySelector(".step-2 .checkout-cards");
   dataArr.map((x) => {
 
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     theContainer.innerHTML += ` <div class="checkout-card-item">
   
         <div class="img">
@@ -1463,7 +1580,7 @@ return to your bag
           <div class="title">${name} - <span class="color">${color}</span></div>
             
           <div class="size-and-price">
-            <div class="size"> size : M</div>
+            <div class="size"> size : ${size}</div>
             <div class="price">${price}$</div>
           </div>
 
@@ -1684,7 +1801,7 @@ return to your bag
   let theContainer = document.querySelector(".step-3 .checkout-cards");
   dataArr.map((x) => {
 
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     theContainer.innerHTML += ` <div class="checkout-card-item">
   
         <div class="img">
@@ -1695,7 +1812,7 @@ return to your bag
           <div class="title">${name} - <span class="color">${color}</span></div>
             
           <div class="size-and-price">
-            <div class="size"> size : M</div>
+            <div class="size"> size : ${size}</div>
             <div class="price">${price}$</div>
           </div>
 
@@ -2040,7 +2157,7 @@ function renderStepFour(dataArr, summaryData) {
   let theContainer = document.querySelector(".step-4 .checkout-cards");
   dataArr.map((x) => {
 
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     theContainer.innerHTML += ` <div class="checkout-card-item">
   
         <div class="img">
@@ -2051,7 +2168,8 @@ function renderStepFour(dataArr, summaryData) {
           <div class="title">${name} - <span class="color">${color}</span></div>
             
           <div class="size-and-price">
-            <div class="size"> size : M</div>
+            <div class="size"> size : ${size}</div>
+
             <div class="price">${price}$</div>
           </div>
 
@@ -2069,6 +2187,14 @@ function renderStepFour(dataArr, summaryData) {
 
 }
 
+function removeFooter() {
+  let bagFooter = document.querySelector(".full-bag .footer");
+  bagFooter.style.display = "none"
+}
+function showFooter() {
+  let bagFooter = document.querySelector(".full-bag .footer");
+  bagFooter.style.display = "block"
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (event) => {
@@ -2085,6 +2211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (event) => {
@@ -2121,16 +2248,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // end steps logic
 
 document.addEventListener("keydown", (e) => {
-  // console.log(e.code)
   if (e.code === "KeyZ") {
     // document.body.innerHTML = ""
     let video = `<div class="m-5 d-flex justify-content-center align-items-center the-video"><video src="Videos/Videoohat_1641083359550898185(234P).mp4" autoplay></video>
     </div>`
     document.body.innerHTML += video
+    window.scrollTo(0, 15000)
     let vid = document.querySelector(".the-video video")
     vid.addEventListener("ended", () => {
       document.querySelectorAll(".the-video").forEach((e) => {
         e.remove();
+        window.scrollTo(0, 0)
+
       })
     })
 
@@ -2173,7 +2302,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       methodCheckBox.querySelector("input[type='checkbox']").checked = true;
       let methodContent = method.querySelector('.method-content');
-      methodContent.classList.toggle('show');
+      methodContent ? methodContent.classList.toggle('show') : false;
     }
   });
 
@@ -2232,5 +2361,3 @@ function renderSelectOptions() {
 
 
 
-
-                     
