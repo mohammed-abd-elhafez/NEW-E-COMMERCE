@@ -1,6 +1,6 @@
 "use strict"
 // debugger;
-// console.log("%cUNDER ANY SITUATION DONT PRESS ||<<   Z   >>||", " color: red; font-size: 20px; text=align: center;");
+console.log("%cUNDER ANY SITUATION DONT PRESS ||<<   Z   >>||", " color: red; font-size: 20px; text=align: center;");
 
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
@@ -566,11 +566,6 @@ function extractCartProductsData(arr) {
       price: e.querySelector(".item-price").textContent,
     })
   })
-  // return Array.from(arr).map((e) => ({
-  //     id: e.id,
-  //     quantity: parseInt(e.querySelector(".select-quantity label span").textContent),
-  //     price: e.querySelector(".item-price").textContent,
-  // }));
   return array;
 }
 
@@ -585,19 +580,13 @@ function addNewItemsToLocalStorage() {
           let search = basket.find((x) => x.id === e.id) || [];
 
           if (search.length !== 0) {
-            // old code
-            // search.quantity++;
-            // ***********************
-
-            console.log(size)
-            console.log(search.size)
+      
             if (size.textContent === search.size) {
               search.quantity++;
 
             } else {
               let text;
               if (confirm("SET A NEW ORDER WITH DIFFERENT SIZE : OK / UPDATE THE PRODUCT SIZE : CANCEL") == true) {
-                deleteItemFromLocalStorage(e.id);
                 basket.push({
                   id: e.id,
                   quantity: 1,
@@ -652,69 +641,14 @@ function addNewItemsToLocalStorage() {
 
       });
     })
-    // e.querySelector(".quick-add-icon").addEventListener("click", function () {
-    //   if (basket.length !== 0) {
+    
 
-    //     let search = basket.find((x) => x.id === e.id) || [];
-    //     if (search.length !== 0) {
-    //       search.quantity++;
+ 
 
-    //     } else {
-    //       basket.push({
-    //         id: e.id,
-    //         quantity: 1
-    //       });
-    //     }
-
-    //   } else {
-    //     basket = [{
-    //       id: e.id,
-    //       quantity: 1
-    //     }];
-    //   }
-
-    //   window.localStorage.setItem("productData", JSON.stringify(basket));
-    //   createCartCards();
-    //   calculateTotalPrice();
-    //   emptyCart();
-
-    // });
+   
 
   });
 };
-
-// function addNewItemsToLocalStorage() {
-//   products.forEach((e) => {
-//     e.querySelector(".quick-add-icon").addEventListener("click", function () {
-//       if (basket.length !== 0) {
-
-//         let search = basket.find((x) => x.id === e.id) || [];
-//         if (search.length !== 0) {
-//           search.quantity++;
-
-//         } else {
-//           basket.push({
-//             id: e.id,
-//             quantity: 1
-//           });
-//         }
-
-//       } else {
-//         basket = [{
-//           id: e.id,
-//           quantity: 1
-//         }];
-//       }
-
-//       window.localStorage.setItem("productData", JSON.stringify(basket));
-//       createCartCards();
-//       calculateTotalPrice();
-//       emptyCart();
-
-//     });
-
-//   });
-// };
 
 
 // call the function when dom loaded because create the cards if there is any data in the local storage
@@ -919,30 +853,6 @@ function deleteItemFromCart() {
   });
 }
 
-// function deleteItemFromCart() {
-//     let cartProducts = document.querySelectorAll(".user-item-card");
-//     console.log(cartProducts.length)
-//     if (cartProducts.length !== 0) {
-//         cartProducts.forEach((product) => {
-//             let deleteBtn = product.querySelector(".delete-item");
-//             deleteBtn.addEventListener("click", () => {
-//                 let id = product.id;
-//                 let products = document.querySelectorAll(`#${id}`);
-//                 products.forEach((e) => {
-//                     e.remove();
-//                 });
-//                 deleteItemFromLocalStorage(id);
-//                 calculateTotalPrice();
-//                 emptyCart();
-
-//             });
-//         });
-//     }
-//     // else {
-//     //     emptyCart();
-//     // }
-// }
-
 
 function deleteItemFromLocalStorage(id) {
   let data = JSON.parse(window.localStorage.getItem("productData")) || [];
@@ -966,27 +876,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // #############################################################
 
-// start cart summary toggler
-// document.addEventListener("DOMContentLoaded", function () {
-//     let summaryToggler = document.querySelector(".mobile-summary-toggler .mobile-summary-title");
-//     let toggledCards = document.querySelector(".checkout-product-info .checkout-cards");
-//     let toggledSummary = document.querySelector(".checkout-product-info .checkout-summary");
-//     let theChevron = document.querySelector(".mobile-summary-toggler .the-chevron");
-//     let theMobileSummaryTitle1 = document.querySelector(".mobile-summary-title .title span:nth-child(1)")
-//     let theMobileSummaryTitle2 = document.querySelector(".mobile-summary-title .title span:nth-child(2)")
 
 
-//     summaryToggler.addEventListener("click", () => {
-//         toggledCards.classList.toggle("show");
-//         toggledSummary.classList.toggle("show");
-//         theChevron.classList.toggle("rotate");
-//         theMobileSummaryTitle1.classList.toggle("hide");
-//         theMobileSummaryTitle2.classList.toggle("show");
-//     });
 
-
-// });
-// end cart summary toggler
 
 // start steps logic
 
