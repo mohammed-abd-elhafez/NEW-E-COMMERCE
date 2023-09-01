@@ -1,7 +1,18 @@
 "use strict"
 // debugger;
 console.log("%cUNDER ANY SITUATION DONT PRESS ||<<   Z   >>||", " color: red; font-size: 20px; text=align: center;");
-
+document.addEventListener('keydown', function (event) {
+  // Check if the pressed key is ArrowDown (key code 40)
+  if (event.key === 'ArrowDown') {
+    // Scroll the page 20px down
+    window.scrollBy(0, 50);
+  }
+  // Check if the pressed key is ArrowUp (key code 38)
+  else if (event.key === 'ArrowUp') {
+    // Scroll the page 20px up
+    window.scrollBy(0, -50);
+  }
+});
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
 let body = document.querySelector("body");
