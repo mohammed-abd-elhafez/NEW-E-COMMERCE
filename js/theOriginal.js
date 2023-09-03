@@ -1,24 +1,27 @@
 "use strict"
 // debugger;
-console.log("%cUNDER ANY SITUATION DONT PRESS ||<<   Z   >>||", " color: red; font-size: 20px; text=align: center;");
-document.addEventListener('keydown', function (event) {
-  // Check if the pressed key is ArrowDown (key code 40)
-  if (event.key === 'ArrowDown') {
-    // Scroll the page 20px down
-    window.scrollBy(0, 50);
-  }
-  // Check if the pressed key is ArrowUp (key code 38)
-  else if (event.key === 'ArrowUp') {
-    // Scroll the page 20px up
-    window.scrollBy(0, -50);
-  }
-});
+console.log("%cUNDER ANY SITUATION DONT PRESS ||<<  Z  >>||", " color: red; font-size: 20px; text=align: center;");
+
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
 let body = document.querySelector("body");
 let bagHasClass = fullBag.classList.contains("show");
 let viewFullBagBtn = document.querySelectorAll(".view-bag");
-let returnToPage = document.querySelector(".return-to-main-page");
+// let returnToPage = document.querySelector(".return-to-main-page");
+
+document.addEventListener("click", (e) => {
+  let returnToMainPage = e.target.closest(".return-to-main-page");
+  if (returnToMainPage) {
+    fullBag.classList.remove("show");
+    hideNewsBar();
+    body.className = "";
+    stepsIndex = 0;
+    window.localStorage.setItem("step", stepsIndex);
+  }
+
+});
+
+
 viewFullBagBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     fullBag.classList.add("show");
@@ -30,14 +33,8 @@ viewFullBagBtn.forEach((btn) => {
     handleStepsRendering(stepsIndex);
   });
 })
-// viewFullBagBtn.addEventListener("click", () => {
-//   fullBag.classList.add("show");
-//   stopBodyScroll();
-//   hideNewsBar();
-//   closeSideCart();
-//   // history.pushState({ overlay: true }, null, '');
-//   manageHistory();
-// });
+
+
 function manageHistory() {
   const overlayVisible = fullBag.classList.contains('show');
   if (overlayVisible) {
@@ -58,15 +55,6 @@ function manageHistory() {
   });
 
 }
-returnToPage.addEventListener("click", () => {
-  fullBag.classList.remove("show");
-  hideNewsBar();
-  body.className = "";
-  stepsIndex = 0;
-  window.localStorage
-  window.localStorage.setItem("step", stepsIndex);
-
-});
 
 function stopBodyScroll() {
   body.classList.toggle("stop1");
@@ -115,9 +103,6 @@ rightProducts.forEach((product) => {
   observer.observe(product);
 });
 
-// allProducts.forEach((product) => {
-//     observer.observe(product);
-// })
 
 // start set buttons attributes
 let allButtons = document.querySelectorAll("button");
@@ -152,9 +137,11 @@ function lazyLoading() {
   let firstImg = document.querySelector(".first-img img");
 
   firstImg.removeAttribute("loading");
+
 };
 // lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
+
 
 function imageAlt() {
   let imgs = Array.from(document.querySelectorAll("img"));
@@ -167,45 +154,6 @@ imageAlt();
 // document.addEventListener("DOMContentLoaded", imageAlt());
 
 
-
-// let news = document.querySelector(".news");
-// let previousText = document.querySelector(".previous");
-// let nextText = document.querySelector(".next");
-// let textContainer = document.querySelector(".text-container");
-// let textArray = Array.from(textContainer.querySelectorAll(".text p"));
-// let current = 1;
-// addActive();
-
-// function removeActive(array) {
-//     if (textArray.length !== 1) {
-//         array.forEach(element => {
-//             element.classList.remove("active");
-//         });
-//     }
-// };
-
-// function addActive() {
-//     removeActive(textArray);
-//     textArray[current - 1].classList.add("active");
-//     if (textArray.length === 1) {
-//         textArray[0].classList.add("active");
-
-//     }
-// }
-// nextText.addEventListener("click", () => {
-//     current = current === textArray.length ? 1 : current + 1;
-//     addActive();
-
-// });
-
-// previousText.addEventListener("click", () => {
-//     current = current !== 1 ? current - 1 : textArray.length;
-//     addActive();
-// });
-
-// let clickInterval = setInterval(() => {
-//     previousText.click();
-// }, 4000);
 // ***************************************************************
 let news = document.querySelector(".news");
 let previousText = document.querySelector(".previous");
@@ -250,14 +198,6 @@ setTimeout(() => {
 
 }, 6000);
 // ****************************************************************
-
-
-
-
-
-
-
-
 
 // start quick-add icon
 let quickAddIcon = document.querySelectorAll(".product .quick-add-icon");
@@ -345,23 +285,26 @@ document.addEventListener("DOMContentLoaded", function () {
 let h5Title = document.querySelectorAll(".nav-ul .nav-li h5");
 let navUl = document.querySelectorAll(".nav-ul .nav-li");
 
-h5Title.forEach((title, index) => {
-  title.addEventListener("click", () => {
-    navUl[index].classList.toggle("show");
-  })
+document.addEventListener("click", (e) => {
+  let navLiH5 = e.target.closest(".nav-ul .nav-li h5");
+  if (navLiH5) {
+    let navLi = navLiH5.closest(".nav-li");
+    navLi.classList.toggle("show");
+  }
+
 });
 // end accordion
 
 
 
 // start region selection
-let selectRegionBtn = document.querySelectorAll(".select-region");
+// let selectRegionBtn = document.querySelectorAll(".select-region");
 let regionName = document.querySelectorAll(".region");
 let regionsImgs = document.querySelectorAll(".regions-flags");
 let firstRegionSelector = document.querySelector(".region-selection-container");
 let regionsOptions = document.getElementById("regions");
-let haveClass = firstRegionSelector.classList.contains("open");
-let submitButton = document.querySelector(".first-region-selection .submit");
+// let haveClass = firstRegionSelector.classList.contains("open");
+// let submitButton = document.querySelector(".first-region-selection .submit");
 let closeRegionSelection = document.querySelector(".first-region-selection .close");
 
 const flags = {
@@ -373,19 +316,27 @@ const flags = {
   morocco: "/regionsFlags/morocco.png",
   eg: "/regionsFlags/egy.png"
 };
-selectRegionBtn.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    firstRegionSelector.classList.toggle("open");
-  });
+
+
+document.addEventListener("click", (e) => {
+
+  let regionBtn = e.target.closest(".select-region");
+  if (regionBtn) {
+    document.querySelector(".region-selection-container").classList.toggle("open");
+  }
+
+  let regionCloseBtn = e.target.closest(".first-region-selection .close");
+  if (regionCloseBtn) {
+    document.querySelector(".region-selection-container").classList.remove("open");
+  }
+
+  let regionSubmitBtn = e.target.closest(".first-region-selection .submit");
+  if (regionSubmitBtn) {
+    changeRegionInfo();
+  }
+
 });
 
-closeRegionSelection.addEventListener("click", () => {
-  closeSelector();
-});
-
-submitButton.addEventListener("click", () => {
-  changeRegionInfo();
-});
 function changeRegionInfo() {
   let selectedOption = regionsOptions.value;
   changeRegionName(selectedOption);
@@ -527,6 +478,167 @@ let theCards = document.querySelectorAll(".user-items-cards");
 let products = document.querySelectorAll(".products-container .product");
 let emptyCartShow = document.querySelectorAll(".empty-cart");
 let emptyCheckOut = document.querySelectorAll(".cart-summary");
+let footerComponent = `  <footer class="footer">
+<div class="footer-container">
+  <nav class="nav-container">
+    <ul class="nav-ul">
+      <li class="nav-li">
+        <h5>help</h5>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Make A Return</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Submit a Fake</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-li">
+        <h5>MY ACCOUNT</h5>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-li">
+        <h5>PAGES</h5>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Emergency Services & NHS Discount</a></li>
+          <li><a href="#">Student Discount</a></li>
+          <li><a href="#">Youth Discount</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">Group Tax Strategy</a></li>
+          <li><a href="#">Pay Gap Reports</a></li>
+          <li><a href="#">Factory List</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="featured-container">
+    <h5>MORE ABOUT GYMSHARK</h5>
+
+    <div class="boxes-container">
+      <div class="box">
+        <div class="img">
+          <img src="IMGS/blog.jpg" alt="blog" />
+        </div>
+
+        <p>blog</p>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <img src="IMGS/newsletter__1_.jpg" alt="news-letter" />
+        </div>
+
+        <p class="box-desc">email sign up</p>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <img src="IMGS/blog.jpg" alt="blog" />
+        </div>
+
+        <p class="box-desc">blog</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="social-media-container">
+    <ul>
+      <li>
+        <a href="#"><i class="fa-brands fa-discord discord"></i></a>
+      </li>
+      <li>
+        <a href="#"
+          ><i class="fa-brands fa-facebook-f facebook"></i
+        ></a>
+      </li>
+      <li>
+        <a href="#"
+          ><i class="fa-brands fa-pinterest-p pinterest"></i
+        ></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-youtube youtube"></i></a>
+      </li>
+      <li>
+        <a href="#"
+          ><i class="fa-brands fa-instagram instagram"></i
+        ></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-twitter twitter"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-tiktok tiktok"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="legal-information">
+    <div class="legal-container">
+      <ul>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Notice</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Modern Slavery</a></li>
+      </ul>
+
+      <div class="select-region">
+        <img
+          src="regionsFlags/egy.png"
+          alt="egypt"
+          class="regions-flags"
+        />
+        <div class="region">EG</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="pay-methods">
+    <span>
+      <i class="fa-brands fa-cc-visa"></i>
+    </span>
+
+    <span>
+      <i class="fa-brands fa-cc-amex"></i>
+    </span>
+
+    <span>
+      <i class="fa-brands fa-paypal"></i>
+    </span>
+
+    <span>
+      <i class="fa-brands fa-cc-apple-pay"></i>
+    </span>
+
+    <span>
+      <i class="fa-solid fa-credit-card"></i>
+    </span>
+
+    <span>
+      <i class="fa-regular fa-credit-card"></i>
+    </span>
+  </div>
+
+  <div class="copy-right">
+    <span
+      >&copy;2023 mohammed abd elhafez | all rights reserved |
+      <i class="fa-solid fa-location-dot"></i> the last left room at
+      your right in the great pyramid</span
+    >
+  </div>
+</div>
+    </footer>`;
 let productData = [];
 const permanentId = [];
 setProductsId(products);
@@ -547,7 +659,6 @@ function initializeBasket() {
 
 }
 initializeBasket();
-
 
 
 // first extract all data from products
@@ -577,6 +688,11 @@ function extractCartProductsData(arr) {
       price: e.querySelector(".item-price").textContent,
     })
   })
+  // return Array.from(arr).map((e) => ({
+  //     id: e.id,
+  //     quantity: parseInt(e.querySelector(".select-quantity label span").textContent),
+  //     price: e.querySelector(".item-price").textContent,
+  // }));
   return array;
 }
 
@@ -591,13 +707,19 @@ function addNewItemsToLocalStorage() {
           let search = basket.find((x) => x.id === e.id) || [];
 
           if (search.length !== 0) {
-      
+            // old code
+            // search.quantity++;
+            // ***********************
+
+            console.log(size)
+            console.log(search.size)
             if (size.textContent === search.size) {
               search.quantity++;
 
             } else {
               let text;
               if (confirm("SET A NEW ORDER WITH DIFFERENT SIZE : OK / UPDATE THE PRODUCT SIZE : CANCEL") == true) {
+                // deleteItemFromLocalStorage(e.id);
                 basket.push({
                   id: e.id,
                   quantity: 1,
@@ -652,14 +774,69 @@ function addNewItemsToLocalStorage() {
 
       });
     })
-    
+    // e.querySelector(".quick-add-icon").addEventListener("click", function () {
+    //   if (basket.length !== 0) {
 
- 
+    //     let search = basket.find((x) => x.id === e.id) || [];
+    //     if (search.length !== 0) {
+    //       search.quantity++;
 
-   
+    //     } else {
+    //       basket.push({
+    //         id: e.id,
+    //         quantity: 1
+    //       });
+    //     }
+
+    //   } else {
+    //     basket = [{
+    //       id: e.id,
+    //       quantity: 1
+    //     }];
+    //   }
+
+    //   window.localStorage.setItem("productData", JSON.stringify(basket));
+    //   createCartCards();
+    //   calculateTotalPrice();
+    //   emptyCart();
+
+    // });
 
   });
 };
+
+// function addNewItemsToLocalStorage() {
+//   products.forEach((e) => {
+//     e.querySelector(".quick-add-icon").addEventListener("click", function () {
+//       if (basket.length !== 0) {
+
+//         let search = basket.find((x) => x.id === e.id) || [];
+//         if (search.length !== 0) {
+//           search.quantity++;
+
+//         } else {
+//           basket.push({
+//             id: e.id,
+//             quantity: 1
+//           });
+//         }
+
+//       } else {
+//         basket = [{
+//           id: e.id,
+//           quantity: 1
+//         }];
+//       }
+
+//       window.localStorage.setItem("productData", JSON.stringify(basket));
+//       createCartCards();
+//       calculateTotalPrice();
+//       emptyCart();
+
+//     });
+
+//   });
+// };
 
 
 // call the function when dom loaded because create the cards if there is any data in the local storage
@@ -864,6 +1041,30 @@ function deleteItemFromCart() {
   });
 }
 
+// function deleteItemFromCart() {
+//     let cartProducts = document.querySelectorAll(".user-item-card");
+//     console.log(cartProducts.length)
+//     if (cartProducts.length !== 0) {
+//         cartProducts.forEach((product) => {
+//             let deleteBtn = product.querySelector(".delete-item");
+//             deleteBtn.addEventListener("click", () => {
+//                 let id = product.id;
+//                 let products = document.querySelectorAll(`#${id}`);
+//                 products.forEach((e) => {
+//                     e.remove();
+//                 });
+//                 deleteItemFromLocalStorage(id);
+//                 calculateTotalPrice();
+//                 emptyCart();
+
+//             });
+//         });
+//     }
+//     // else {
+//     //     emptyCart();
+//     // }
+// }
+
 
 function deleteItemFromLocalStorage(id) {
   let data = JSON.parse(window.localStorage.getItem("productData")) || [];
@@ -887,9 +1088,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // #############################################################
 
+// start cart summary toggler
+// document.addEventListener("DOMContentLoaded", function () {
+//     let summaryToggler = document.querySelector(".mobile-summary-toggler .mobile-summary-title");
+//     let toggledCards = document.querySelector(".checkout-product-info .checkout-cards");
+//     let toggledSummary = document.querySelector(".checkout-product-info .checkout-summary");
+//     let theChevron = document.querySelector(".mobile-summary-toggler .the-chevron");
+//     let theMobileSummaryTitle1 = document.querySelector(".mobile-summary-title .title span:nth-child(1)")
+//     let theMobileSummaryTitle2 = document.querySelector(".mobile-summary-title .title span:nth-child(2)")
 
 
+//     summaryToggler.addEventListener("click", () => {
+//         toggledCards.classList.toggle("show");
+//         toggledSummary.classList.toggle("show");
+//         theChevron.classList.toggle("rotate");
+//         theMobileSummaryTitle1.classList.toggle("hide");
+//         theMobileSummaryTitle2.classList.toggle("show");
+//     });
 
+
+// });
+// end cart summary toggler
 
 // start steps logic
 
@@ -897,7 +1116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let stepsIndex = 0;
 let mainStepsContainer = document.querySelector(".main-steps-container");
-
+let fullBagContainer = document.querySelector(".full-bag-container");
 document.addEventListener("DOMContentLoaded", () => {
 
   mainStepsContainer.addEventListener("click", (event) => {
@@ -983,7 +1202,7 @@ function handleStepsRendering(stepNumber) {
 
         mainStepsContainer.innerHTML = "";
         renderStepOne(extractedCardsData, extractedSummaryData);
-        showFooter();
+        // showFooter();
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         console.log("sorry sir we dont memoized yet, but we will call the `first step` function right away");
         window.localStorage.setItem("step", stepNumber);
@@ -994,7 +1213,7 @@ function handleStepsRendering(stepNumber) {
 
         mainStepsContainer.innerHTML = "";
         renderStepTwo(extractedCardsData, extractedSummaryData);
-        removeFooter();
+        // removeFooter();
         console.log("sorry sir we dont memoized yet, but we will call the `second step` function right away");
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         window.localStorage.setItem("step", stepNumber);
@@ -1003,7 +1222,7 @@ function handleStepsRendering(stepNumber) {
       case 2:
         mainStepsContainer.innerHTML = "";
         renderStepThree(extractedCardsData, extractedSummaryData);
-        removeFooter();
+        // removeFooter();
         console.log("sorry sir we dont memoized yet, but we will call the `second step` function right away");
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         window.localStorage.setItem("step", stepNumber);
@@ -1012,7 +1231,7 @@ function handleStepsRendering(stepNumber) {
       case 3:
         mainStepsContainer.innerHTML = "";
         renderStepFour(extractedCardsData, extractedSummaryData);
-        removeFooter();
+        // removeFooter();
         console.log("sorry sir we dont memoized yet, but we will call the `second step` function right away");
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         window.localStorage.setItem("step", stepNumber);
@@ -1227,6 +1446,7 @@ function renderStepOne(dataArr, summaryData) {
 
 
   });
+  fullBagContainer.innerHTML += footerComponent;
 
 }
 
@@ -2169,7 +2389,26 @@ document.addEventListener("keydown", (e) => {
   }
 })
 
+document.addEventListener('keydown', function (event) {
+  // Check if the pressed key is ArrowDown (key code 40)
+  if (event.key === 'ArrowDown') {
+    // Scroll the page 20px down
+    window.scrollBy(0, 50);
+  }
+  // Check if the pressed key is ArrowUp (key code 38)
+  else if (event.key === 'ArrowUp') {
+    // Scroll the page 20px up
+    window.scrollBy(0, -50);
+  }
+});
 
+async function fetchApi() {
+  fetch('https://fakestoreapi.com/products')
+    .then(res => res.json())
+    .then(json => console.log(json))
+
+}
+// fetchApi()
 
 
 // #############################################################
@@ -2247,14 +2486,6 @@ function renderSelectOptions() {
   });
 
 }
-
-
-
-// create a function that save the steps index into local storage so if the page reloaded
-// the function calls and render the page that was opened
-
-
-
 
 
 
