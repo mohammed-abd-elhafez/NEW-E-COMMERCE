@@ -1,12 +1,27 @@
 "use strict"
 // debugger;
+console.log("%cUNDER ANY SITUATION DONT PRESS ||<<  Z  >>||", " color: red; font-size: 20px; text=align: center;");
 
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
 let body = document.querySelector("body");
 let bagHasClass = fullBag.classList.contains("show");
 let viewFullBagBtn = document.querySelectorAll(".view-bag");
-let returnToPage = document.querySelector(".return-to-main-page");
+// let returnToPage = document.querySelector(".return-to-main-page");
+
+document.addEventListener("click", (e) => {
+  let returnToMainPage = e.target.closest(".return-to-main-page");
+  if (returnToMainPage) {
+    fullBag.classList.remove("show");
+    hideNewsBar();
+    body.className = "";
+    stepsIndex = 0;
+    window.localStorage.setItem("step", stepsIndex);
+  }
+
+});
+
+
 viewFullBagBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     fullBag.classList.add("show");
@@ -15,16 +30,10 @@ viewFullBagBtn.forEach((btn) => {
     closeSideCart();
     // history.pushState({ overlay: true }, null, '');
     manageHistory();
+    handleStepsRendering(stepsIndex);
   });
 })
-// viewFullBagBtn.addEventListener("click", () => {
-//   fullBag.classList.add("show");
-//   stopBodyScroll();
-//   hideNewsBar();
-//   closeSideCart();
-//   // history.pushState({ overlay: true }, null, '');
-//   manageHistory();
-// });
+
 function manageHistory() {
   const overlayVisible = fullBag.classList.contains('show');
   if (overlayVisible) {
@@ -45,17 +54,6 @@ function manageHistory() {
   });
 
 }
-returnToPage.addEventListener("click", () => {
-  fullBag.classList.remove("show");
-  hideNewsBar();
-  body.className = "";
-  stepsIndex = 0;
-  console.log(stepsIndex)
-  // stopBodyScroll();
-  // history.replaceState(null, null, '');
-
-
-});
 
 function stopBodyScroll() {
   body.classList.toggle("stop1");
@@ -69,7 +67,7 @@ function closeSideCart() {
     mainCart.classList.remove("open");
     shoppingCart.classList.remove("animate");
     shoppingCart.classList.remove("show");
-    shoppingCart.classList.remove("show-pc");
+    // shoppingCart.classList.remove("show-pc");
   }, 700);
 }
 
@@ -82,13 +80,14 @@ let rightProducts = document.querySelectorAll(".products-container .product.righ
 let observer = new IntersectionObserver(entries => {
   entries.forEach((entry) => {
     entry.target.classList.toggle("show", entry.isIntersecting);
-    if (entry.isIntersecting) {
-      observer.unobserve(entry.target);
-    }
+    // if (entry.isIntersecting) {
+    //   observer.unobserve(entry.target);
+    // }
   })
 }, {
-  threshold: 0.5,
-});
+  threshold: 0.1,
+}
+);
 
 leftProducts.forEach((product) => {
   observer.observe(product);
@@ -125,13 +124,6 @@ function setLinkAttr(arr) {
   arr.forEach((link) => {
     link.setAttribute("aria-label", "link");
     link.href = "temp.html"
-    // console.log(link)
-    if (link.href == "#") {
-      console.log("true")
-    } else if (link.href.length === 0) {
-      link.href = "temp.html"
-
-    }
     // link.href = "temp.html"
   });
 };
@@ -147,9 +139,20 @@ function lazyLoading() {
   let firstImg = document.querySelector(".first-img img");
 
   firstImg.removeAttribute("loading");
+
 };
 // lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
+
+
+
+
+// document.querySelectorAll(".mano-oh-yeah").forEach((e) => {
+//   setInterval(() => {
+//     e.click()
+
+//   }, 2000);
+// })
 
 function imageAlt() {
   let imgs = Array.from(document.querySelectorAll("img"));
@@ -340,23 +343,32 @@ document.addEventListener("DOMContentLoaded", function () {
 let h5Title = document.querySelectorAll(".nav-ul .nav-li h5");
 let navUl = document.querySelectorAll(".nav-ul .nav-li");
 
-h5Title.forEach((title, index) => {
-  title.addEventListener("click", () => {
-    navUl[index].classList.toggle("show");
-  })
+// h5Title.forEach((title, index) => {
+//   title.addEventListener("click", () => {
+//     navUl[index].classList.toggle("show");
+//   })
+// });
+
+document.addEventListener("click", (e) => {
+  let navLiH5 = e.target.closest(".nav-ul .nav-li h5");
+  if (navLiH5) {
+    let navLi = navLiH5.closest(".nav-li");
+    navLi.classList.toggle("show");
+  }
+
 });
 // end accordion
 
 
 
 // start region selection
-let selectRegionBtn = document.querySelectorAll(".select-region");
+// let selectRegionBtn = document.querySelectorAll(".select-region");
 let regionName = document.querySelectorAll(".region");
 let regionsImgs = document.querySelectorAll(".regions-flags");
 let firstRegionSelector = document.querySelector(".region-selection-container");
 let regionsOptions = document.getElementById("regions");
-let haveClass = firstRegionSelector.classList.contains("open");
-let submitButton = document.querySelector(".first-region-selection .submit");
+// let haveClass = firstRegionSelector.classList.contains("open");
+// let submitButton = document.querySelector(".first-region-selection .submit");
 let closeRegionSelection = document.querySelector(".first-region-selection .close");
 
 const flags = {
@@ -368,19 +380,38 @@ const flags = {
   morocco: "/regionsFlags/morocco.png",
   eg: "/regionsFlags/egy.png"
 };
-selectRegionBtn.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    firstRegionSelector.classList.toggle("open");
-  });
+// selectRegionBtn.forEach((btn) => {
+//   btn.addEventListener("click", (event) => {
+//     firstRegionSelector.classList.toggle("open");
+//   });
+// });
+
+document.addEventListener("click", (e) => {
+
+  let regionBtn = e.target.closest(".select-region");
+  if (regionBtn) {
+    document.querySelector(".region-selection-container").classList.toggle("open");
+  }
+
+  let regionCloseBtn = e.target.closest(".first-region-selection .close");
+  if (regionCloseBtn) {
+    document.querySelector(".region-selection-container").classList.remove("open");
+  }
+
+  let regionSubmitBtn = e.target.closest(".first-region-selection .submit");
+  if (regionSubmitBtn) {
+    changeRegionInfo();
+  }
+
 });
 
-closeRegionSelection.addEventListener("click", () => {
-  closeSelector();
-});
+// closeRegionSelection.addEventListener("click", () => {
+//   closeSelector();
+// });
 
-submitButton.addEventListener("click", () => {
-  changeRegionInfo();
-});
+// submitButton.addEventListener("click", () => {
+//   changeRegionInfo();
+// });
 function changeRegionInfo() {
   let selectedOption = regionsOptions.value;
   changeRegionName(selectedOption);
@@ -481,7 +512,7 @@ let allTheImg = document.querySelectorAll("img");
 
 allTheImg.forEach((e) => {
   e.addEventListener("error", () => {
-    e.src = "IMGS/white.svg"
+    e.src = "All_Images/svg/white.svg"
   })
 
 })
@@ -495,32 +526,34 @@ let totalPrice = document.querySelectorAll(".total-price");
 
 
 let mainCart = document.querySelector(".shopping-cart")
-cartToggler.addEventListener("click", () => {
+cartToggler.addEventListener("click", showSideCart);
+function showSideCart() {
   shoppingCart.classList.toggle("show");
-  shoppingCart.classList.toggle("show-pc");
   mainCart.classList.toggle("open");
   document.body.classList.toggle("stop")
-});
 
-cartCloser.addEventListener("click", () => {
+}
+cartCloser.addEventListener("click", hideSideCart);
+
+function hideSideCart() {
   shoppingCart.classList.toggle("animate");
   document.body.classList.remove("stop");
 
   setTimeout(() => {
     mainCart.classList.remove("open");
     shoppingCart.classList.remove("show");
-    shoppingCart.classList.remove("show-pc");
     shoppingCart.classList.remove("animate");
 
-  }, 700);
+  }, 400);
+}
 
 
-});
 
 let theCards = document.querySelectorAll(".user-items-cards");
 let products = document.querySelectorAll(".products-container .product");
 let emptyCartShow = document.querySelectorAll(".empty-cart");
 let emptyCheckOut = document.querySelectorAll(".cart-summary");
+
 let productData = [];
 const permanentId = [];
 setProductsId(products);
@@ -541,7 +574,6 @@ function initializeBasket() {
 
 }
 initializeBasket();
-
 
 
 // first extract all data from products
@@ -583,36 +615,143 @@ function extractCartProductsData(arr) {
 addNewItemsToLocalStorage();
 function addNewItemsToLocalStorage() {
   products.forEach((e) => {
-    e.querySelector(".quick-add-icon").addEventListener("click", function () {
-      if (basket.length !== 0) {
+    e.querySelectorAll(".quick-add-container .sizes span").forEach((size) => {
+      size.addEventListener("click", function () {
+        if (basket.length !== 0) {
 
-        let search = basket.find((x) => x.id === e.id) || [];
-        if (search.length !== 0) {
-          search.quantity++;
+          let search = basket.find((x) => x.id === e.id) || [];
+
+          if (search.length !== 0) {
+            // old code
+            // search.quantity++;
+            // ***********************
+
+            console.log(size)
+            console.log(search.size)
+            if (size.textContent === search.size) {
+              search.quantity++;
+
+            } else {
+              let text;
+              if (confirm("SET A NEW ORDER WITH DIFFERENT SIZE : OK / UPDATE THE PRODUCT SIZE : CANCEL") == true) {
+                // deleteItemFromLocalStorage(e.id);
+                basket.push({
+                  id: e.id,
+                  quantity: 1,
+                  size: size.textContent
+                });
+              } else {
+                let itemId = size.closest("article").id
+                basket.map((x) => {
+                  if (x.id === itemId) {
+
+                    let quantity = x.quantity;
+                    let newSize = size.textContent
+                    let prevId = x.id
+
+                    deleteItemFromLocalStorage(x.id);
+
+                    basket.push({
+                      id: prevId,
+                      quantity: quantity,
+                      size: newSize
+                    });
+
+                  }
+
+                })
+              }
+            }
+
+
+          } else {
+            basket.push({
+              id: e.id,
+              quantity: 1,
+              size: size.textContent
+            });
+          }
 
         } else {
-          basket.push({
+          basket = [{
             id: e.id,
-            quantity: 1
-          });
+            quantity: 1,
+            size: size.textContent
+          }];
+          // document.proto
         }
 
-      } else {
-        basket = [{
-          id: e.id,
-          quantity: 1
-        }];
-      }
+        window.localStorage.setItem("productData", JSON.stringify(basket));
+        createCartCards();
+        calculateTotalPrice();
+        emptyCart();
+        showSideCart();
 
-      window.localStorage.setItem("productData", JSON.stringify(basket));
-      createCartCards();
-      calculateTotalPrice();
-      emptyCart();
+      });
+    })
+    // e.querySelector(".quick-add-icon").addEventListener("click", function () {
+    //   if (basket.length !== 0) {
 
-    });
+    //     let search = basket.find((x) => x.id === e.id) || [];
+    //     if (search.length !== 0) {
+    //       search.quantity++;
+
+    //     } else {
+    //       basket.push({
+    //         id: e.id,
+    //         quantity: 1
+    //       });
+    //     }
+
+    //   } else {
+    //     basket = [{
+    //       id: e.id,
+    //       quantity: 1
+    //     }];
+    //   }
+
+    //   window.localStorage.setItem("productData", JSON.stringify(basket));
+    //   createCartCards();
+    //   calculateTotalPrice();
+    //   emptyCart();
+
+    // });
 
   });
 };
+
+// function addNewItemsToLocalStorage() {
+//   products.forEach((e) => {
+//     e.querySelector(".quick-add-icon").addEventListener("click", function () {
+//       if (basket.length !== 0) {
+
+//         let search = basket.find((x) => x.id === e.id) || [];
+//         if (search.length !== 0) {
+//           search.quantity++;
+
+//         } else {
+//           basket.push({
+//             id: e.id,
+//             quantity: 1
+//           });
+//         }
+
+//       } else {
+//         basket = [{
+//           id: e.id,
+//           quantity: 1
+//         }];
+//       }
+
+//       window.localStorage.setItem("productData", JSON.stringify(basket));
+//       createCartCards();
+//       calculateTotalPrice();
+//       emptyCart();
+
+//     });
+
+//   });
+// };
 
 
 // call the function when dom loaded because create the cards if there is any data in the local storage
@@ -639,10 +778,9 @@ function createCartCards() {
 
     data.map((x) => {
 
-      let { id, quantity } = x;
+      let { id, quantity, size } = x;
       let search = productDataArray.find((x) => x.id === id);
       let newSearch = cartDataArray.some((x) => x.id === id);
-
       if (newSearch) {
         let theChosenEle = document.querySelectorAll(`.user-items-cards #${search.id}`);
         theChosenEle.forEach((e) => {
@@ -666,7 +804,10 @@ function createCartCards() {
 <div class="item-title">
 <p class="item-name">${search.name}</p>
 <p class="item-desc">${search.desc}</p>
-<p class="item-color">${search.color}</p>
+<div class="item-color">
+<div class="color">${search.color}</div>
+<span class="item-size">${size}</span>
+</div>
 <span class="item-price">${search.price}</span>
 </div>
 
@@ -718,13 +859,22 @@ function createCartCards() {
 }
 
 
+let itemsCount = document.querySelector(".shopping-cart-toggler .count")
 calculateTotalPrice();
+
 function calculateTotalPrice() {
   let itemsNumber = document.querySelector(".items-numbers .items span");
-  let cartProducts = document.querySelectorAll(".user-items-cards .user-item-card");
+  let cartProducts = document.querySelectorAll(".shopping-cart .user-item-card");
   let total = 0;
   if (cartProducts.length !== 0) {
-    itemsNumber.textContent = cartProducts.length / 2;
+    itemsCount.style.display = 'block'
+    itemsNumber.textContent = cartProducts.length;
+    itemsCount.textContent = cartProducts.length;
+
+  } else {
+    itemsCount.style.display = 'none'
+    itemsCount.textContent = 0;
+
   }
 
   basket.forEach((item) => {
@@ -738,8 +888,7 @@ function calculateTotalPrice() {
         e.textContent = `${total} $`;
       })
     }
-  });
-
+  })
   return total;
 }
 
@@ -760,6 +909,13 @@ function emptyCart() {
     });
     checkOut.classList.remove("hide");
   } else if (basket.length === 0) {
+    if (mainStepsContainer.querySelector(".check-out-progress")) {
+      mainStepsContainer.querySelector(".check-out-progress").remove();
+      mainStepsContainer.querySelector(".mobile-summary").remove();
+      mainStepsContainer.querySelector(".cart-summary").remove();
+    }
+
+
     emptyCartShow.forEach((e) => {
       e.classList.add("show")
     });
@@ -794,7 +950,7 @@ function deleteItemFromCart() {
 
         deleteItemFromLocalStorage(id);
         calculateTotalPrice();
-        emptyCart();
+        emptyCart()
       }
     }
   });
@@ -825,7 +981,6 @@ function deleteItemFromCart() {
 // }
 
 
-
 function deleteItemFromLocalStorage(id) {
   let data = JSON.parse(window.localStorage.getItem("productData")) || [];
   let index = data.findIndex((obj) => obj.id === id);
@@ -841,7 +996,7 @@ function deleteItemFromLocalStorage(id) {
 document.addEventListener("DOMContentLoaded", () => {
   emptyCart();
   deleteItemFromCart();
-  // calculateTotalPrice();
+  calculateTotalPrice();
 });
 
 
@@ -876,24 +1031,180 @@ document.addEventListener("DOMContentLoaded", () => {
 
 let stepsIndex = 0;
 let mainStepsContainer = document.querySelector(".main-steps-container");
+let footerComponent = `<footer class="footer">
+<div class="footer-container">
+  <nav class="nav-container">
+    <ul class="nav-ul">
+      <li class="nav-li">
+        <h5>help</h5>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Delivery Information</a></li>
+          <li><a href="#">Returns Policy</a></li>
+          <li><a href="#">Make A Return</a></li>
+          <li><a href="#">Orders</a></li>
+          <li><a href="#">Submit a Fake</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-li">
+        <h5>MY ACCOUNT</h5>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-li">
+        <h5>PAGES</h5>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Emergency Services & NHS Discount</a></li>
+          <li><a href="#">Student Discount</a></li>
+          <li><a href="#">Youth Discount</a></li>
+          <li><a href="#">Accessibility Statement</a></li>
+          <li><a href="#">Group Tax Strategy</a></li>
+          <li><a href="#">Pay Gap Reports</a></li>
+          <li><a href="#">Factory List</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="featured-container">
+    <h5>MORE ABOUT GYMSHARK</h5>
+
+    <div class="boxes-container">
+      <div class="box">
+        <div class="img">
+          <img src="All_Images/footer_images/blog.webp" alt="blog" />
+        </div>
+
+        <p>blog</p>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <img src="All_Images/footer_images/newsletter__1_.webp" alt="news-letter" />
+        </div>
+
+        <p class="box-desc">email sign up</p>
+      </div>
+
+      <div class="box">
+        <div class="img">
+          <img src="All_Images/footer_images/blog.webp" alt="blog" />
+        </div>
+
+        <p class="box-desc">blog</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="social-media-container">
+    <ul>
+      <li>
+        <a href="#"><i class="fa-brands fa-discord discord"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-facebook-f facebook"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-pinterest-p pinterest"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-youtube youtube"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-instagram instagram"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-twitter twitter"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-tiktok tiktok"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="legal-information">
+    <div class="legal-container">
+      <ul>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Notice</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Modern Slavery</a></li>
+      </ul>
+
+      <div class="select-region">
+        <img
+          src="All_Images/regionsFlags/egy.png"
+          alt="egypt"
+          class="regions-flags"
+        />
+        <div class="region">EG</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="pay-methods">
+    <span>
+      <i class="fa-brands fa-cc-visa"></i>
+    </span>
+
+    <span>
+      <i class="fa-brands fa-cc-amex"></i>
+    </span>
+
+    <span>
+      <i class="fa-brands fa-paypal"></i>
+    </span>
+
+    <span>
+      <i class="fa-brands fa-cc-apple-pay"></i>
+    </span>
+
+    <span>
+      <i class="fa-solid fa-credit-card"></i>
+    </span>
+
+    <span>
+      <i class="fa-regular fa-credit-card"></i>
+    </span>
+  </div>
+
+  <div class="copy-right">
+    <span
+      >&copy;2023 mohammed abd elhafez | all rights reserved |
+      <i class="fa-solid fa-location-dot"></i> the last left room at your
+      right in the great pyramid</span
+    >
+  </div>
+</div>
+</footer>`
+// let fullBagContainer = document.querySelector(".full-bag-container");
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  mainStepsContainer.addEventListener("click", (event) => {
-    const target = event.target;
-    if (target.classList.contains("next-step")) {
-      stepsIndex++;
-      manageHistory();
+  document.addEventListener("click", (e) => {
 
+    if (e.target.classList.contains("next-step")) {
+      stepsIndex++;
       handleStepsRendering(stepsIndex);
-    } else if (target.classList.contains("prev-step")) {
+
+    } else if (e.target.classList.contains("prev-step")) {
       stepsIndex--;
       handleStepsRendering(stepsIndex);
     }
+
   });
 
   if (basket.length !== 0) {
-    stepsIndex = JSON.parse(localStorage.getItem("step"));
-    console.log(stepsIndex)
+    stepsIndex = JSON.parse(localStorage.getItem("step")) || 0;
 
     if (stepsIndex > 0) {
       fullBag.classList.toggle("show");
@@ -906,15 +1217,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-})
+});
 
+
+// console.log(document.querySelectorAll("#imageList li").length)
 function extractCardsDataFromSideCart(arr) {
   if (arr.length !== 0) {
     return Array.from(arr).map((e) => ({
+
       id: e.id,
       img: e.querySelector(".item-img img").src,
       name: e.querySelector(".item-name").textContent,
-      color: e.querySelector(".item-color").textContent,
+      color: e.querySelector(".item-color .color").textContent,
+      size: e.querySelector(".item-size").textContent,
       price: parseInt(e.querySelector(".item-price").textContent.replace("$", "")),
       description: e.querySelector(".item-desc").textContent,
       quantity: parseInt(e.querySelector("label .span").textContent),
@@ -945,14 +1260,13 @@ function handleStepsRendering(stepNumber) {
   let extractedCardsData = extractCardsDataFromSideCart(sideCartProducts);
   let extractedSummaryData = extractSummaryDataFromSideCart(sideCartSummary);
 
+  let fullBagContainer = document.querySelector(".full-bag-container");
 
 
   if (renderedStepArray[stepNumber] !== undefined) {
     mainStepsContainer.innerHTML = "";
     mainStepsContainer.innerHTML = renderedStepArray[stepNumber];
     console.log("we already have the `the memoized step` element sir and we will render it directly");
-    stepsIndex === 0 ? showFooter() : false;
-
 
   } else {
 
@@ -961,8 +1275,10 @@ function handleStepsRendering(stepNumber) {
 
         mainStepsContainer.innerHTML = "";
         renderStepOne(extractedCardsData, extractedSummaryData);
-        showFooter();
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
+        fullBagContainer.insertAdjacentHTML('beforeend', footerComponent);
+
+
         console.log("sorry sir we dont memoized yet, but we will call the `first step` function right away");
         window.localStorage.setItem("step", stepNumber);
 
@@ -972,7 +1288,7 @@ function handleStepsRendering(stepNumber) {
 
         mainStepsContainer.innerHTML = "";
         renderStepTwo(extractedCardsData, extractedSummaryData);
-        removeFooter();
+
         console.log("sorry sir we dont memoized yet, but we will call the `second step` function right away");
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         window.localStorage.setItem("step", stepNumber);
@@ -981,7 +1297,6 @@ function handleStepsRendering(stepNumber) {
       case 2:
         mainStepsContainer.innerHTML = "";
         renderStepThree(extractedCardsData, extractedSummaryData);
-        removeFooter();
         console.log("sorry sir we dont memoized yet, but we will call the `second step` function right away");
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         window.localStorage.setItem("step", stepNumber);
@@ -990,30 +1305,19 @@ function handleStepsRendering(stepNumber) {
       case 3:
         mainStepsContainer.innerHTML = "";
         renderStepFour(extractedCardsData, extractedSummaryData);
-        removeFooter();
         console.log("sorry sir we dont memoized yet, but we will call the `second step` function right away");
         renderedStepArray[stepNumber] = mainStepsContainer.innerHTML;
         window.localStorage.setItem("step", stepNumber);
-
         break;
     }
 
   }
 
+}
 
-  // handleSteps()
-}
-function removeFooter() {
-  let bagFooter = document.querySelector(".full-bag .footer");
-  bagFooter.style.display = "none"
-}
-function showFooter() {
-  let bagFooter = document.querySelector(".full-bag .footer");
-  bagFooter.style.display = "block"
-}
 
 function renderStepOne(dataArr, summaryData) {
-
+  // console.log(fullBagContainer)
   mainStepsContainer.innerHTML =
     ` <div class="check-out-step step-1">
   <div class="check-out-progress">
@@ -1149,28 +1453,13 @@ function renderStepOne(dataArr, summaryData) {
     </div>
   </div>
 
-  <div class="empty-cart">
-    <div class="empty-cart-container">
-      <div class="img">
-        <img src="IMGS/empty-bag.svg" alt="">
-      </div>
-
-      <h5>YOUR BAG IS EMPTY</h5>
-      <p>There are no products in your bag</p>
-      <button>shop men</button>
-      <button>shop women</button>
-
-    </div>
-    
-
-  </div>
+  
 
  </div> `;
 
   let cardsContainer = document.querySelector(".check-out-step.step-1 .user-items-cards");
   dataArr.map((x) => {
-
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     cardsContainer.innerHTML += ` <div class="user-item-card" id="${id}">
         <div class="item-img">
           <img
@@ -1183,7 +1472,12 @@ function renderStepOne(dataArr, summaryData) {
           <div class="item-title">
             <p class="item-name">${name}</p>
             <p class="item-desc">${description}</p>
-            <p class="item-color">${color}</p>
+
+            <div class="item-color">
+        <div class="color">${color}</div>
+        <span class="item-size">${size}</span>
+        </div>
+
             <span class="item-price">$${price}</span>
           </div>
 
@@ -1222,9 +1516,9 @@ function renderStepOne(dataArr, summaryData) {
 
 
   });
+  // fullBagContainer.innerHTML += footerComponent;
 
 }
-
 
 
 function renderStepTwo(dataArr, summaryData) {
@@ -1467,7 +1761,7 @@ return to your bag
   let theContainer = document.querySelector(".step-2 .checkout-cards");
   dataArr.map((x) => {
 
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     theContainer.innerHTML += ` <div class="checkout-card-item">
   
         <div class="img">
@@ -1478,7 +1772,7 @@ return to your bag
           <div class="title">${name} - <span class="color">${color}</span></div>
             
           <div class="size-and-price">
-            <div class="size"> size : M</div>
+            <div class="size"> size : ${size}</div>
             <div class="price">${price}$</div>
           </div>
 
@@ -1491,7 +1785,6 @@ return to your bag
 
 
   });
-
 
 
 }
@@ -1699,7 +1992,7 @@ return to your bag
   let theContainer = document.querySelector(".step-3 .checkout-cards");
   dataArr.map((x) => {
 
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     theContainer.innerHTML += ` <div class="checkout-card-item">
   
         <div class="img">
@@ -1710,7 +2003,7 @@ return to your bag
           <div class="title">${name} - <span class="color">${color}</span></div>
             
           <div class="size-and-price">
-            <div class="size"> size : M</div>
+            <div class="size"> size : ${size}</div>
             <div class="price">${price}$</div>
           </div>
 
@@ -2055,7 +2348,7 @@ function renderStepFour(dataArr, summaryData) {
   let theContainer = document.querySelector(".step-4 .checkout-cards");
   dataArr.map((x) => {
 
-    let { color, description, id, img, name, price, quantity } = x;
+    let { color, description, id, img, name, price, quantity, size } = x;
     theContainer.innerHTML += ` <div class="checkout-card-item">
   
         <div class="img">
@@ -2066,7 +2359,8 @@ function renderStepFour(dataArr, summaryData) {
           <div class="title">${name} - <span class="color">${color}</span></div>
             
           <div class="size-and-price">
-            <div class="size"> size : M</div>
+            <div class="size"> size : ${size}</div>
+
             <div class="price">${price}$</div>
           </div>
 
@@ -2085,8 +2379,9 @@ function renderStepFour(dataArr, summaryData) {
 }
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  mainStepsContainer.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
     const target = event.target;
     const title = target.closest(".mobile-summary-toggler .mobile-summary-title")
     if (title) {
@@ -2101,8 +2396,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
 document.addEventListener("DOMContentLoaded", () => {
-  mainStepsContainer.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
     const target = event.target;
     const summary = target.closest(".full-bag .cart-summary .check-out-help summary");
     if (summary) {
@@ -2136,23 +2432,31 @@ document.addEventListener("DOMContentLoaded", () => {
 // end steps logic
 
 document.addEventListener("keydown", (e) => {
-  console.log(e.code)
   if (e.code === "KeyZ") {
     // document.body.innerHTML = ""
     let video = `<div class="m-5 d-flex justify-content-center align-items-center the-video"><video src="Videos/Videoohat_1641083359550898185(234P).mp4" autoplay></video>
     </div>`
     document.body.innerHTML += video
+    window.scrollTo(0, 15000)
     let vid = document.querySelector(".the-video video")
     vid.addEventListener("ended", () => {
       document.querySelectorAll(".the-video").forEach((e) => {
         e.remove();
+        window.scrollTo(0, 0)
+
       })
     })
 
   }
 })
 
+async function fetchApi() {
+  fetch('https://fakestoreapi.com/products')
+    .then(res => res.json())
+    .then(json => console.log(json))
 
+}
+// fetchApi()
 
 
 // #############################################################
@@ -2188,7 +2492,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       methodCheckBox.querySelector("input[type='checkbox']").checked = true;
       let methodContent = method.querySelector('.method-content');
-      methodContent.classList.toggle('show');
+      methodContent ? methodContent.classList.toggle('show') : false;
     }
   });
 
@@ -2236,6 +2540,199 @@ function renderSelectOptions() {
 // create a function that save the steps index into local storage so if the page reloaded
 // the function calls and render the page that was opened
 
+// #############################################################
+
+// function listImagesInDirectory(directoryPath) {
+//   const imageListElement = document.getElementById('imageList');
+//   let imgDataObj = []
+
+//   // Fetch the list of image files
+//   fetch(directoryPath)
+//     .then(response => response.text())
+//     .then(data => {
+//       // Parse the HTML content to extract image paths
+//       const parser = new DOMParser();
+//       const htmlDoc = parser.parseFromString(data, 'text/html');
+//       const images = htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"]');
+//       // Display image paths in a list
+//       images.forEach(image => {
+
+//         const imagePath = image.getAttribute('href');
+//         const listItem = document.createElement('li');
+//         listItem.textContent = imagePath;
+//         imgDataObj.push({
+//           img: imagePath,
+//         })
+//         imageListElement.appendChild(listItem);
+//       });
+//       console.log(imgDataObj)
+
+//     })
+//     .catch(error => {
+//       console.error('Error fetching image list:', error);
+//     });
+// }
+// listImagesInDirectory("All_Images/categories_images/accessories/bags")
+// Call the function with the directory path
+// listImagesInDirectory("imgs Container/mens/base_layer/");
+
+// #############################################################
+
+// 1 - convert images to webp
+// 2 - create JSON file to use it as api
+//  and the api should have a product color, price, description, categories , name, clothe type like hoodies or tank
+// after making the json data you will make  the categories pages then finish step 4 then you will search about `search-algorithms`
+// 4 - create a function that gets the each checkout step data to append it in the next step 
+
+
+const bagsImagePaths = [
+  "/All_Images/categories_images/accessories/bags/1.webp",
+  "/All_Images/categories_images/accessories/bags/12.webp",
+  "/All_Images/categories_images/accessories/bags/2.webp",
+  "/All_Images/categories_images/accessories/bags/3.webp",
+  "/All_Images/categories_images/accessories/bags/4.webp",
+  "/All_Images/categories_images/accessories/bags/5.webp",
+  "/All_Images/categories_images/accessories/bags/6.webp",
+  "/All_Images/categories_images/accessories/bags/image_101.webp",
+  "/All_Images/categories_images/accessories/bags/image_103.webp",
+  "/All_Images/categories_images/accessories/bags/image_105.webp",
+  "/All_Images/categories_images/accessories/bags/image_109.webp",
+  "/All_Images/categories_images/accessories/bags/image_111.webp",
+  "/All_Images/categories_images/accessories/bags/image_113.webp",
+  "/All_Images/categories_images/accessories/bags/image_119.webp",
+  "/All_Images/categories_images/accessories/bags/image_121.webp",
+  "/All_Images/categories_images/accessories/bags/image_123.webp",
+  "/All_Images/categories_images/accessories/bags/image_125.webp",
+  "/All_Images/categories_images/accessories/bags/image_127.webp",
+  "/All_Images/categories_images/accessories/bags/image_129.webp",
+  "/All_Images/categories_images/accessories/bags/image_131.webp",
+  "/All_Images/categories_images/accessories/bags/image_14.webp",
+  "/All_Images/categories_images/accessories/bags/image_15.webp",
+  "/All_Images/categories_images/accessories/bags/image_17.webp",
+  "/All_Images/categories_images/accessories/bags/image_19.webp",
+  "/All_Images/categories_images/accessories/bags/image_21.webp",
+  "/All_Images/categories_images/accessories/bags/image_23.webp",
+  "/All_Images/categories_images/accessories/bags/image_25.webp",
+  "/All_Images/categories_images/accessories/bags/image_27.webp",
+  "/All_Images/categories_images/accessories/bags/image_29.webp",
+  "/All_Images/categories_images/accessories/bags/image_31.webp",
+  "/All_Images/categories_images/accessories/bags/image_33.webp",
+  "/All_Images/categories_images/accessories/bags/image_35.webp",
+  "/All_Images/categories_images/accessories/bags/image_37.webp",
+  "/All_Images/categories_images/accessories/bags/image_39.webp",
+  "/All_Images/categories_images/accessories/bags/image_41.webp",
+  "/All_Images/categories_images/accessories/bags/image_43.webp",
+  "/All_Images/categories_images/accessories/bags/image_45.webp",
+  "/All_Images/categories_images/accessories/bags/image_47.webp",
+  "/All_Images/categories_images/accessories/bags/image_49.webp",
+  "/All_Images/categories_images/accessories/bags/image_51.webp",
+  "/All_Images/categories_images/accessories/bags/image_53.webp",
+  "/All_Images/categories_images/accessories/bags/image_55.webp",
+  "/All_Images/categories_images/accessories/bags/image_57.webp",
+  "/All_Images/categories_images/accessories/bags/image_59.webp",
+  "/All_Images/categories_images/accessories/bags/image_61.webp",
+  "/All_Images/categories_images/accessories/bags/image_63.webp",
+  "/All_Images/categories_images/accessories/bags/image_65.webp",
+  "/All_Images/categories_images/accessories/bags/image_67.webp",
+  "/All_Images/categories_images/accessories/bags/image_69.webp",
+  "/All_Images/categories_images/accessories/bags/image_71.webp",
+  "/All_Images/categories_images/accessories/bags/image_73.webp",
+  "/All_Images/categories_images/accessories/bags/image_75.webp",
+  "/All_Images/categories_images/accessories/bags/image_77.webp",
+  "/All_Images/categories_images/accessories/bags/image_79.webp",
+  "/All_Images/categories_images/accessories/bags/image_81.webp",
+  "/All_Images/categories_images/accessories/bags/image_83.webp",
+  "/All_Images/categories_images/accessories/bags/image_85.webp",
+  "/All_Images/categories_images/accessories/bags/image_87.webp",
+  "/All_Images/categories_images/accessories/bags/image_89.webp",
+  "/All_Images/categories_images/accessories/bags/image_91.webp",
+  "/All_Images/categories_images/accessories/bags/image_93.webp",
+  "/All_Images/categories_images/accessories/bags/image_95.webp",
+  "/All_Images/categories_images/accessories/bags/image_97.webp",
+  "/All_Images/categories_images/accessories/bags/image_99.webp"
+];
+
+
+
+
+async function listImagesInDirectory(directoryPath) {
+  let pathArray = []
+  await fetch(directoryPath)
+    .then((response) => response.text())
+    .then((data) => {
+      // Parse the HTML content to extract image paths
+      const parser = new DOMParser();
+      const htmlDoc = parser.parseFromString(data, "text/html");
+      const images = htmlDoc.querySelectorAll(
+        'a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"], a[href$=".gif"], a[href$=".webp"]'
+      );
+      // Display image paths in a list
+      images.forEach((image) => {
+        // console.log(image.href);
+        let ImgHref = image.href;
+        // if the code does not worked after uploading it on github check this line
+        pathArray.push(ImgHref.slice(21))
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching image list:", error);
+    });
+  return pathArray;
+}
+
+// listImagesInDirectory("/All_Images/categories_images/accessories/bags/");
+
+
+// function createApi() {
+//   // start accessories 
+//   const bagsPromise = listImagesInDirectory("/All_Images/categories_images/accessories/bags/");
+//   const equipmentPromise = listImagesInDirectory("/All_Images/categories_images/accessories/equipment/");
+//   const footWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/footwear/");
+//   const HeadWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/headwear/");
+
+//   let bagsImages;
+//   let equipmentImages;
+//   let footWearImages;
+//   let HeadWearImages;
+
+//   bagsPromise.then((response) => bagsImages = response);
+//   equipmentPromise.then((response) => equipmentImages = response);
+//   footWearPromise.then((response) => footWearImages = response);
+//   HeadWearPromise.then((response) => HeadWearImages = response);
+// console.log(bagsImages)
+
+// }
+
+// createApi()
+
+function createApi() {
+  // Declare variables to store the response data
+  let bagsImages;
+  let equipmentImages;
+  let footWearImages;
+  let HeadWearImages;
+  let allImgs = []
+  // Define your promises
+  const bagsPromise = listImagesInDirectory("/All_Images/categories_images/accessories/bags/");
+  const equipmentPromise = listImagesInDirectory("/All_Images/categories_images/accessories/equipment/");
+  const footWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/footwear/");
+  const HeadWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/headwear/");
+
+  // Use Promise.all to wait for all promises to resolve
+  Promise.all([bagsPromise, equipmentPromise, footWearPromise, HeadWearPromise])
+    .then(([bagsResponse, equipmentResponse, footWearResponse, HeadWearResponse]) => {
+
+      bagsImages = bagsResponse;
+      equipmentImages = equipmentResponse;
+      footWearImages = footWearResponse;
+      HeadWearImages = HeadWearResponse;
+
+      allImgs = [...bagsImages, ...equipmentImages, ...footWearImages, ...HeadWearImages];
+      // console.log(allImgs);
+      // console.log(bagsImages);
+      // console.log(equipmentImages.length);
+      // console.log(footWearImages.length);
+      console.log(HeadWearImages);
 
 
 
@@ -2244,6 +2741,48 @@ function renderSelectOptions() {
 
 
 
+
+    })
+
+
+
+
+
+
+
+
+    .catch(error => {
+      console.error('Error fetching images:', error);
+    });
+}
+
+createApi();
+
+function createJsonData(arr) {
+  let emptyArr = [];
+  arr.forEach((e, index) => {
+
+    emptyArr.push({
+      id: index,
+      name: "Product",
+      description: `Description for Product${index}`,
+      color: "Red",
+      category: "Men",
+      price: 29.99,
+      size: "M",
+      image: "/All_Images/categories_images / accessories / bags / image_111.web"
+    })
+
+  })
+}
+
+
+
+let str = "http://127.0.0.1:5500/All_Images/categories_images/accessories/bags/1.webp";
+
+str.slice(0, 21)
+
+console.log(str.slice(21))
 
 
 
