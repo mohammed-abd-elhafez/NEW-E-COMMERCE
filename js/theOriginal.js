@@ -2728,9 +2728,9 @@ function createApi() {
       HeadWearImages = HeadWearResponse;
 
       allImgs = [...bagsImages, ...equipmentImages, ...footWearImages, ...HeadWearImages];
-      console.log(createJsonData(equipmentImages))
+      // console.log(createJsonData(equipmentImages))
       // console.log(allImgs);
-      // console.log(bagsImages);
+      console.log(bagsImages);
       // console.log(equipmentImages.length);
       // console.log(footWearImages.length);
       // console.log(HeadWearImages);
