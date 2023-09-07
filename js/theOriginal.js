@@ -2728,11 +2728,12 @@ function createApi() {
       HeadWearImages = HeadWearResponse;
 
       allImgs = [...bagsImages, ...equipmentImages, ...footWearImages, ...HeadWearImages];
+      console.log(createJsonData(equipmentImages))
       // console.log(allImgs);
       // console.log(bagsImages);
       // console.log(equipmentImages.length);
       // console.log(footWearImages.length);
-      console.log(HeadWearImages);
+      // console.log(HeadWearImages);
 
 
 
@@ -2761,28 +2762,34 @@ createApi();
 function createJsonData(arr) {
   let emptyArr = [];
   arr.forEach((e, index) => {
-
+    // console.log(e)
     emptyArr.push({
       id: index,
       name: "Product",
       description: `Description for Product${index}`,
       color: "Red",
-      category: "Men",
+      mainCategory: "Men",
+      secondaryCategory: "Men",
       price: 29.99,
       size: "M",
-      image: "/All_Images/categories_images / accessories / bags / image_111.web"
+      image: `${e}`
     })
 
   })
+
+  return emptyArr;
 }
 
 
+const str = "/All_Images/categories_images/accessories/equipment/image_63.webp";
+const categoryRegExp = /\/([^/]+)\/[^/]+$/;
+const match = str.match(categoryRegExp);
 
-let str = "http://127.0.0.1:5500/All_Images/categories_images/accessories/bags/1.webp";
-
-str.slice(0, 21)
-
-console.log(str.slice(21))
-
+if (match) {
+  const categoryName = match[1];
+  console.log(categoryName); // This will log "equipment"
+} else {
+  console.log("Category name not found.");
+}
 
 
