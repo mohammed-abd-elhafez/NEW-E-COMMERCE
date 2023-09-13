@@ -446,17 +446,7 @@ function addActiveNav(ele) {
 };
 
 // #############################################################
-// start placeholder replacer
 
-// let allTheImg = document.querySelectorAll("img");
-
-// allTheImg.forEach((e) => {
-//   e.addEventListener("error", () => {
-//     e.src = "All_Images/svg/white.svg"
-//   })
-
-// })
-// end placeholder replacer
 // #############################################################
 
 // #############################################################
