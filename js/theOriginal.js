@@ -2,12 +2,13 @@
 // debugger;
 console.log("%cUNDER ANY SITUATION DONT PRESS ||<<  Z  >>||", " color: red; font-size: 20px; text=align: center;");
 
+
+// #############################################################
 // hide news bar when full bag is opened
 let fullBag = document.querySelector(".full-bag");
 let body = document.querySelector("body");
 let bagHasClass = fullBag.classList.contains("show");
 let viewFullBagBtn = document.querySelectorAll(".view-bag");
-// let returnToPage = document.querySelector(".return-to-main-page");
 
 document.addEventListener("click", (e) => {
   let returnToMainPage = e.target.closest(".return-to-main-page");
@@ -70,7 +71,9 @@ function closeSideCart() {
     // shoppingCart.classList.remove("show-pc");
   }, 700);
 }
+// #############################################################
 
+// #############################################################
 let allProducts = document.querySelectorAll(".products-container .product");
 let leftProducts = document.querySelectorAll(".products-container .product.left");
 let medLeftProducts = document.querySelectorAll(".products-container .product.med-left");
@@ -101,24 +104,26 @@ medRightProducts.forEach((product) => {
 rightProducts.forEach((product) => {
   observer.observe(product);
 });
+// #############################################################
 
-// allProducts.forEach((product) => {
-//     observer.observe(product);
-// })
-
+// #############################################################
 // start set buttons attributes
+
 let allButtons = document.querySelectorAll("button");
 function setBtnAttr(arr) {
   arr.forEach((btn) => {
     btn.setAttribute("aria-label", "button");
   });
 };
-// setBtnAttr(allButtons);
 document.addEventListener('DOMContentLoaded', setBtnAttr(allButtons));
+
 // end set buttons attributes
+// #############################################################
 
 
+// #############################################################
 // start set links attributes
+
 let allLinks = document.querySelectorAll("a");
 function setLinkAttr(arr) {
   arr.forEach((link) => {
@@ -128,8 +133,11 @@ function setLinkAttr(arr) {
   });
 };
 document.addEventListener('DOMContentLoaded', setLinkAttr(allLinks));
-// start set links attributes
 
+// end set links attributes
+// #############################################################
+
+// #############################################################
 function lazyLoading() {
   let imgs = Array.from(document.querySelectorAll("img"));
   imgs.forEach((img) => {
@@ -141,19 +149,10 @@ function lazyLoading() {
   firstImg.removeAttribute("loading");
 
 };
-// lazyLoading();
 document.addEventListener("DOMContentLoaded", lazyLoading());
+// #############################################################
 
-
-
-
-// document.querySelectorAll(".mano-oh-yeah").forEach((e) => {
-//   setInterval(() => {
-//     e.click()
-
-//   }, 2000);
-// })
-
+// #############################################################
 function imageAlt() {
   let imgs = Array.from(document.querySelectorAll("img"));
   imgs.forEach((img) => {
@@ -162,49 +161,9 @@ function imageAlt() {
 
 };
 imageAlt();
-// document.addEventListener("DOMContentLoaded", imageAlt());
+// #############################################################
 
-
-
-// let news = document.querySelector(".news");
-// let previousText = document.querySelector(".previous");
-// let nextText = document.querySelector(".next");
-// let textContainer = document.querySelector(".text-container");
-// let textArray = Array.from(textContainer.querySelectorAll(".text p"));
-// let current = 1;
-// addActive();
-
-// function removeActive(array) {
-//     if (textArray.length !== 1) {
-//         array.forEach(element => {
-//             element.classList.remove("active");
-//         });
-//     }
-// };
-
-// function addActive() {
-//     removeActive(textArray);
-//     textArray[current - 1].classList.add("active");
-//     if (textArray.length === 1) {
-//         textArray[0].classList.add("active");
-
-//     }
-// }
-// nextText.addEventListener("click", () => {
-//     current = current === textArray.length ? 1 : current + 1;
-//     addActive();
-
-// });
-
-// previousText.addEventListener("click", () => {
-//     current = current !== 1 ? current - 1 : textArray.length;
-//     addActive();
-// });
-
-// let clickInterval = setInterval(() => {
-//     previousText.click();
-// }, 4000);
-// ***************************************************************
+// #############################################################
 let news = document.querySelector(".news");
 let previousText = document.querySelector(".previous");
 let nextText = document.querySelector(".next");
@@ -247,16 +206,9 @@ setTimeout(() => {
   startInterval();
 
 }, 6000);
-// ****************************************************************
+// #############################################################
 
-
-
-
-
-
-
-
-
+// #############################################################
 // start quick-add icon
 let quickAddIcon = document.querySelectorAll(".product .quick-add-icon");
 let quickAdd = document.querySelectorAll(".quick-add")
@@ -287,16 +239,20 @@ function removeClassName(array, className) {
   })
 }
 
+// end quick-add icon
+// #############################################################
 
+
+// #############################################################
 let backToTop = document.querySelector(".back-to-top");
-
-
 backToTop.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   })
 });
+// #############################################################
+
 
 let section = Array.from(document.querySelectorAll(".section"));
 let wrapMe = document.querySelectorAll(".wrap-me");
@@ -337,17 +293,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   a(shuffledArray)
 });
+// #############################################################
 
 
+// #############################################################
 // start accordion
 let h5Title = document.querySelectorAll(".nav-ul .nav-li h5");
 let navUl = document.querySelectorAll(".nav-ul .nav-li");
-
-// h5Title.forEach((title, index) => {
-//   title.addEventListener("click", () => {
-//     navUl[index].classList.toggle("show");
-//   })
-// });
 
 document.addEventListener("click", (e) => {
   let navLiH5 = e.target.closest(".nav-ul .nav-li h5");
@@ -358,17 +310,15 @@ document.addEventListener("click", (e) => {
 
 });
 // end accordion
+// #############################################################
 
-
-
+// #############################################################
 // start region selection
-// let selectRegionBtn = document.querySelectorAll(".select-region");
+
 let regionName = document.querySelectorAll(".region");
 let regionsImgs = document.querySelectorAll(".regions-flags");
 let firstRegionSelector = document.querySelector(".region-selection-container");
 let regionsOptions = document.getElementById("regions");
-// let haveClass = firstRegionSelector.classList.contains("open");
-// let submitButton = document.querySelector(".first-region-selection .submit");
 let closeRegionSelection = document.querySelector(".first-region-selection .close");
 
 const flags = {
@@ -380,11 +330,6 @@ const flags = {
   morocco: "/regionsFlags/morocco.png",
   eg: "/regionsFlags/egy.png"
 };
-// selectRegionBtn.forEach((btn) => {
-//   btn.addEventListener("click", (event) => {
-//     firstRegionSelector.classList.toggle("open");
-//   });
-// });
 
 document.addEventListener("click", (e) => {
 
@@ -405,13 +350,6 @@ document.addEventListener("click", (e) => {
 
 });
 
-// closeRegionSelection.addEventListener("click", () => {
-//   closeSelector();
-// });
-
-// submitButton.addEventListener("click", () => {
-//   changeRegionInfo();
-// });
 function changeRegionInfo() {
   let selectedOption = regionsOptions.value;
   changeRegionName(selectedOption);
@@ -437,8 +375,9 @@ function closeSelector() {
 };
 
 // end region selection
+// #############################################################
 
-
+// #############################################################
 // start side bar
 
 let showSideBar = document.querySelector(".show-side-bar");
@@ -506,18 +445,21 @@ function addActiveNav(ele) {
   ele.classList.add("active");
 };
 
+// #############################################################
 // start placeholder replacer
 
-let allTheImg = document.querySelectorAll("img");
+// let allTheImg = document.querySelectorAll("img");
 
-allTheImg.forEach((e) => {
-  e.addEventListener("error", () => {
-    e.src = "All_Images/svg/white.svg"
-  })
+// allTheImg.forEach((e) => {
+//   e.addEventListener("error", () => {
+//     e.src = "All_Images/svg/white.svg"
+//   })
 
-})
+// })
 // end placeholder replacer
+// #############################################################
 
+// #############################################################
 // start cart
 let cartToggler = document.querySelector(".shopping-cart-toggler");
 let cartCloser = document.querySelector(".close-cart");
@@ -719,39 +661,6 @@ function addNewItemsToLocalStorage() {
 
   });
 };
-
-// function addNewItemsToLocalStorage() {
-//   products.forEach((e) => {
-//     e.querySelector(".quick-add-icon").addEventListener("click", function () {
-//       if (basket.length !== 0) {
-
-//         let search = basket.find((x) => x.id === e.id) || [];
-//         if (search.length !== 0) {
-//           search.quantity++;
-
-//         } else {
-//           basket.push({
-//             id: e.id,
-//             quantity: 1
-//           });
-//         }
-
-//       } else {
-//         basket = [{
-//           id: e.id,
-//           quantity: 1
-//         }];
-//       }
-
-//       window.localStorage.setItem("productData", JSON.stringify(basket));
-//       createCartCards();
-//       calculateTotalPrice();
-//       emptyCart();
-
-//     });
-
-//   });
-// };
 
 
 // call the function when dom loaded because create the cards if there is any data in the local storage
@@ -956,30 +865,6 @@ function deleteItemFromCart() {
   });
 }
 
-// function deleteItemFromCart() {
-//     let cartProducts = document.querySelectorAll(".user-item-card");
-//     console.log(cartProducts.length)
-//     if (cartProducts.length !== 0) {
-//         cartProducts.forEach((product) => {
-//             let deleteBtn = product.querySelector(".delete-item");
-//             deleteBtn.addEventListener("click", () => {
-//                 let id = product.id;
-//                 let products = document.querySelectorAll(`#${id}`);
-//                 products.forEach((e) => {
-//                     e.remove();
-//                 });
-//                 deleteItemFromLocalStorage(id);
-//                 calculateTotalPrice();
-//                 emptyCart();
-
-//             });
-//         });
-//     }
-//     // else {
-//     //     emptyCart();
-//     // }
-// }
-
 
 function deleteItemFromLocalStorage(id) {
   let data = JSON.parse(window.localStorage.getItem("productData")) || [];
@@ -999,35 +884,13 @@ document.addEventListener("DOMContentLoaded", () => {
   calculateTotalPrice();
 });
 
+// end cart
+// #############################################################
 
 
 // #############################################################
 
-// start cart summary toggler
-// document.addEventListener("DOMContentLoaded", function () {
-//     let summaryToggler = document.querySelector(".mobile-summary-toggler .mobile-summary-title");
-//     let toggledCards = document.querySelector(".checkout-product-info .checkout-cards");
-//     let toggledSummary = document.querySelector(".checkout-product-info .checkout-summary");
-//     let theChevron = document.querySelector(".mobile-summary-toggler .the-chevron");
-//     let theMobileSummaryTitle1 = document.querySelector(".mobile-summary-title .title span:nth-child(1)")
-//     let theMobileSummaryTitle2 = document.querySelector(".mobile-summary-title .title span:nth-child(2)")
-
-
-//     summaryToggler.addEventListener("click", () => {
-//         toggledCards.classList.toggle("show");
-//         toggledSummary.classList.toggle("show");
-//         theChevron.classList.toggle("rotate");
-//         theMobileSummaryTitle1.classList.toggle("hide");
-//         theMobileSummaryTitle2.classList.toggle("show");
-//     });
-
-
-// });
-// end cart summary toggler
-
 // start steps logic
-
-
 
 let stepsIndex = 0;
 let mainStepsContainer = document.querySelector(".main-steps-container");
@@ -1220,7 +1083,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// console.log(document.querySelectorAll("#imageList li").length)
 function extractCardsDataFromSideCart(arr) {
   if (arr.length !== 0) {
     return Array.from(arr).map((e) => ({
@@ -1516,7 +1378,6 @@ function renderStepOne(dataArr, summaryData) {
 
 
   });
-  // fullBagContainer.innerHTML += footerComponent;
 
 }
 
@@ -2431,41 +2292,247 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // end steps logic
 
-document.addEventListener("keydown", (e) => {
-  if (e.code === "KeyZ") {
-    // document.body.innerHTML = ""
-    let video = `<div class="m-5 d-flex justify-content-center align-items-center the-video"><video src="Videos/Videoohat_1641083359550898185(234P).mp4" autoplay></video>
-    </div>`
-    document.body.innerHTML += video
-    window.scrollTo(0, 15000)
-    let vid = document.querySelector(".the-video video")
-    vid.addEventListener("ended", () => {
-      document.querySelectorAll(".the-video").forEach((e) => {
-        e.remove();
-        window.scrollTo(0, 0)
+// #############################################################
 
-      })
-    })
 
-  }
-})
+let ds = [
+  "/All_Images/categories_images/accessories/bags/1.webp",
 
-async function fetchApi() {
-  fetch('https://fakestoreapi.com/products')
-    .then(res => res.json())
-    .then(json => console.log(json))
+  "/All_Images/categories_images/accessories/bags/12.webp",
 
-}
-// fetchApi()
+  "/All_Images/categories_images/accessories/bags/2.webp",
 
+  "/All_Images/categories_images/accessories/bags/3.webp",
+
+  "/All_Images/categories_images/accessories/bags/4.webp",
+
+  "/All_Images/categories_images/accessories/bags/5.webp",
+
+  "/All_Images/categories_images/accessories/bags/6.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_101.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_103.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_105.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_109.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_111.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_113.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_119.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_121.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_123.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_125.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_127.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_129.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_131.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_14.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_15.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_17.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_19.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_21.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_23.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_25.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_27.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_29.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_31.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_33.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_35.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_37.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_39.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_41.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_43.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_45.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_47.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_49.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_51.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_53.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_55.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_57.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_59.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_61.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_63.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_65.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_67.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_69.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_71.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_73.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_75.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_77.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_79.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_81.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_83.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_85.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_87.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_89.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_91.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_93.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_95.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_97.webp",
+
+  "/All_Images/categories_images/accessories/bags/image_99.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_14.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_15.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_17.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_19.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_21.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_23.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_25.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_27.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_29.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_39.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_41.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_51.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_53.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_55.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_57.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_61.webp",
+
+  "/All_Images/categories_images/accessories/equipment/image_63.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_14.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_15.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_17.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_19.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_21.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_23.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_25.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_27.webp",
+
+  "/All_Images/categories_images/accessories/footwear/image_29.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_14.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_15.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_17.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_19.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_23.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_25.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_27.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_29.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_31.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_33.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_35.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_37.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_39.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_41.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_43.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_45.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_47.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_49.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_51.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_53.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_55.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_57.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_61.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_63.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_65.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_67.webp",
+
+  "/All_Images/categories_images/accessories/headwear/image_71.webp"]
 
 // #############################################################
 // #############################################################
 // #############################################################
-
-
-// Get all checkboxes
-
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -2534,7 +2601,28 @@ function renderSelectOptions() {
   });
 
 }
+// #############################################################
 
+document.addEventListener("keydown", (e) => {
+  if (e.code === "KeyZ") {
+    // document.body.innerHTML = ""
+    let video = `<div class="m-5 d-flex justify-content-center align-items-center the-video"><video src="Videos/Videoohat_1641083359550898185(234P).mp4" autoplay></video>
+    </div>`
+    document.body.innerHTML += video
+    window.scrollTo(0, 15000)
+    let vid = document.querySelector(".the-video video")
+    vid.addEventListener("ended", () => {
+      document.querySelectorAll(".the-video").forEach((e) => {
+        e.remove();
+        window.scrollTo(0, 0)
+
+      })
+    })
+
+  }
+})
+
+// #############################################################
 
 
 // create a function that save the steps index into local storage so if the page reloaded
@@ -2653,8 +2741,6 @@ const bagsImagePaths = [
 ];
 
 
-
-
 async function listImagesInDirectory(directoryPath) {
   let pathArray = []
   await fetch(directoryPath)
@@ -2680,30 +2766,7 @@ async function listImagesInDirectory(directoryPath) {
   return pathArray;
 }
 
-// listImagesInDirectory("/All_Images/categories_images/accessories/bags/");
 
-
-// function createApi() {
-//   // start accessories 
-//   const bagsPromise = listImagesInDirectory("/All_Images/categories_images/accessories/bags/");
-//   const equipmentPromise = listImagesInDirectory("/All_Images/categories_images/accessories/equipment/");
-//   const footWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/footwear/");
-//   const HeadWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/headwear/");
-
-//   let bagsImages;
-//   let equipmentImages;
-//   let footWearImages;
-//   let HeadWearImages;
-
-//   bagsPromise.then((response) => bagsImages = response);
-//   equipmentPromise.then((response) => equipmentImages = response);
-//   footWearPromise.then((response) => footWearImages = response);
-//   HeadWearPromise.then((response) => HeadWearImages = response);
-// console.log(bagsImages)
-
-// }
-
-// createApi()
 
 function createApi() {
   // Declare variables to store the response data
@@ -2711,44 +2774,30 @@ function createApi() {
   let equipmentImages;
   let footWearImages;
   let HeadWearImages;
+  let socksImages;
   let allImgs = []
   // Define your promises
   const bagsPromise = listImagesInDirectory("/All_Images/categories_images/accessories/bags/");
   const equipmentPromise = listImagesInDirectory("/All_Images/categories_images/accessories/equipment/");
   const footWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/footwear/");
   const HeadWearPromise = listImagesInDirectory("/All_Images/categories_images/accessories/headwear/");
+  const socksPromise = listImagesInDirectory("/All_Images/categories_images/accessories/socks/");
+
 
   // Use Promise.all to wait for all promises to resolve
-  Promise.all([bagsPromise, equipmentPromise, footWearPromise, HeadWearPromise])
-    .then(([bagsResponse, equipmentResponse, footWearResponse, HeadWearResponse]) => {
+  Promise.all([bagsPromise, equipmentPromise, footWearPromise, HeadWearPromise, socksPromise])
+    .then(([bagsResponse, equipmentResponse, footWearResponse, HeadWearResponse, socksPromise]) => {
 
       bagsImages = bagsResponse;
       equipmentImages = equipmentResponse;
       footWearImages = footWearResponse;
       HeadWearImages = HeadWearResponse;
+      socksImages = socksPromise;
 
-      allImgs = [...bagsImages, ...equipmentImages, ...footWearImages, ...HeadWearImages];
-      // console.log(createJsonData(equipmentImages))
-      // console.log(allImgs);
-      console.log(bagsImages);
-      // console.log(equipmentImages.length);
-      // console.log(footWearImages.length);
-      // console.log(HeadWearImages);
+      allImgs = [...bagsImages, ...equipmentImages, ...footWearImages, ...HeadWearImages, ...socksImages];
 
-
-
-
-
-
-
-
-
+      console.log(...allImgs)
     })
-
-
-
-
-
 
 
 
@@ -2759,37 +2808,82 @@ function createApi() {
 
 createApi();
 
-function createJsonData(arr) {
-  let emptyArr = [];
-  arr.forEach((e, index) => {
-    // console.log(e)
-    emptyArr.push({
-      id: index,
-      name: "Product",
-      description: `Description for Product${index}`,
-      color: "Red",
-      mainCategory: "Men",
-      secondaryCategory: "Men",
-      price: 29.99,
-      size: "M",
-      image: `${e}`
-    })
 
+
+// start fetch api
+async function fetchApi() {
+  try {
+    const response = await fetch('Json_Data/main.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const jsonData = await response.json();
+
+    // Now you can store the API data in a variable or process it as needed
+    const data = jsonData;
+
+    // You can return the data or perform other operations here
+    return data;
+  } catch (error) {
+    console.error('Error fetching API data:', error);
+    // You can handle the error here or re-throw it if needed
+    throw error;
+  }
+}
+ 
+fetchApi()
+  .then(data => {
+
+    // checkApi(data, ds)
+    findIdByPath(data, ds)
+    const ids = findIdByPath(ds, data);
+    console.log(ids)
   })
+  .catch(error => {
+    console.error(error);
+  });
 
-  return emptyArr;
+function checkApi(array1, array2) {
+
+  let emptyArr = []
+  for (let i = 0; i < array1.length; i++) {
+    let first = array1[i];
+    // let second = array[i + 1];
+    let ele = array2[i]
+    console.log(ele)
+    // console.log(second)
+    if (first.IMAGEPATH === ele) {
+      // let duplicated = first.ID;
+      emptyArr.push(first.IMAGEPATH)
+    }
+  }
+  // console.log(emptyArr)
+
 }
 
 
-const str = "/All_Images/categories_images/accessories/equipment/image_63.webp";
-const categoryRegExp = /\/([^/]+)\/[^/]+$/;
-const match = str.match(categoryRegExp);
+function findIdByPath(ds, jsonData) {
+  const result = [];
 
-if (match) {
-  const categoryName = match[1];
-  console.log(categoryName); // This will log "equipment"
-} else {
-  console.log("Category name not found.");
+  // Iterate through each path in the ds array
+  for (const path of ds) {
+    // Iterate through each JSON object in the jsonData array
+    for (const obj of jsonData) {
+      if (obj.IMAGEPATH === path) {
+        // If the path exists in the JSON object, push the ID to the result array
+        result.push(obj.ID);
+        
+        break; // No need to continue searching for this path
+      }
+    }
+  }
+// console.log(result.length)
+  return result;
 }
+
+// end fetch api
+
+
 
 
