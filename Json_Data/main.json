@@ -1,206 +1,2183 @@
 [
-    {   
-      "id": 1,
-      "name": "Product 1",
-      "description": "Description for Product 1",
-      "color": "Red",
-      "category": "Men",
-      "price": 29.99,
-      "size": "M",
-      "image": "/All_Images/categories_images/accessories/bags/1.webp"
+  {
+    "ID": "1",
+    "NAME": "gfx-sharkhead-gymsack",
+    "DESCRIPTION": "A trendy and versatile backpack for all occasions.",
+    "COLOR": "navy",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/1.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "2",
+    "NAME": "gfx-sharkhead-gymsack",
+    "DESCRIPTION": "A stylish leather messenger bag for professionals.",
+    "COLOR": "denim-blue",
+    "PRICE": 79.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/12.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "3",
+    "NAME": "gfx-sharkhead-gymsack",
+    "DESCRIPTION": "A durable canvas tote bag for daily use.",
+    "COLOR": "brown",
+    "PRICE": 39.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/2.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "4",
+    "NAME": "premium-lifestyle-belt-bag",
+    "DESCRIPTION": "A chic and compact clutch purse for evenings out.",
+    "COLOR": "grey",
+    "PRICE": 29.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/3.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "5",
+    "NAME": "quilted-yoga-tote",
+    "DESCRIPTION": "A spacious laptop backpack for tech enthusiasts.",
+    "COLOR": "frost teal",
+    "PRICE": 59.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/4.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "6",
+    "NAME": "quilted-yoga-tote",
+    "DESCRIPTION": "A versatile travel duffel bag for wanderers.",
+    "COLOR": "sandy-brown",
+    "PRICE": 69.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/5.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "7",
+    "NAME": "everyday-tote",
+    "DESCRIPTION": "A sporty gym bag to carry your workout essentials.",
+    "COLOR": "black",
+    "PRICE": 34.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/6.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "8",
+    "NAME": "premium-lifestyle-cross-body",
+    "DESCRIPTION": "A fashionable tote bag for shopping and outings.",
+    "COLOR": "light-olive-green",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_101.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "9",
+    "NAME": "premium-lifestyle-shoulder-bag",
+    "DESCRIPTION": "A classic satchel bag for timeless style.",
+    "COLOR": "light grey",
+    "PRICE": 59.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_103.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "10",
+    "NAME": "quilted-mini-tote",
+    "DESCRIPTION": "An elegant handbag for formal occasions.",
+    "COLOR": "sandy-brown",
+    "PRICE": 64.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_105.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "11",
+    "NAME": "everyday-mini-backpack",
+    "DESCRIPTION": "A casual and comfortable backpack for everyday use.",
+    "COLOR": "black",
+    "PRICE": 42.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_109.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "12",
+    "NAME": "premium-lifestyle-shoulder-bag",
+    "DESCRIPTION": "An urban-style sling bag for city adventures.",
+    "COLOR": "terracotta-pink",
+    "PRICE": 44.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_111.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "13",
+    "NAME": "premium-lifestyle-backpack",
+    "DESCRIPTION": "A rugged hiking backpack for outdoor enthusiasts.",
+    "COLOR": "onyx-grey",
+    "PRICE": 74.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_113.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "14",
+    "NAME": "premium-lifestyle-backpack",
+    "DESCRIPTION": "A spacious weekend travel bag for quick getaways.",
+    "COLOR": "terracotta-pink",
+    "PRICE": 54.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_119.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "15",
+    "NAME": "small-everyday-holdall",
+    "DESCRIPTION": "A sleek laptop briefcase for professionals on the move.",
+    "COLOR": "cement-brown",
+    "PRICE": 64.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_121.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "16",
+    "NAME": "bold-holdall",
+    "DESCRIPTION": "A designer tote bag for the fashion-forward.",
+    "COLOR": "black",
+    "PRICE": 89.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_123.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "17",
+    "NAME": "everyday-mini-backpack",
+    "DESCRIPTION": "A vintage-style leather backpack for retro charm.",
+    "COLOR": "black",
+    "PRICE": 74.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_125.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "18",
+    "NAME": "sharkhead-backpack",
+    "DESCRIPTION": "A trendy and fashionable backpack for style-conscious individuals.",
+    "COLOR": "denim-blue",
+    "PRICE": 54.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_127.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "19",
+    "NAME": "sharkhead-cross-body",
+    "DESCRIPTION": "A versatile weekender duffel bag for short trips.",
+    "COLOR": "black",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_129.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "20",
+    "NAME": "x-series-0-3-bag",
+    "COLOR": "black",
+    "PRICE": 34.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_131.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "21",
+    "NAME": "small-everyday-holdall",
+    "COLOR": "Black",
+    "PRICE": 44.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_14.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "22",
+    "NAME": "everyday-tote",
+    "COLOR": "black",
+    "PRICE": 59.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_15.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "23",
+    "NAME": "everyday-holdall-large",
+    "COLOR": "light-grey",
+    "PRICE": 39.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_17.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "24",
+    "NAME": "sharkhead-backpack",
+    "COLOR": "black",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_19.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "25",
+    "NAME": "everyday-holdall-medium",
+    "COLOR": "light-pink",
+    "PRICE": 64.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_21.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "26",
+    "NAME": "quilted-yoga-tote",
+    "COLOR": "cool-brown",
+    "PRICE": 79.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_23.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "27",
+    "NAME": "everyday-holdall-medium",
+    "COLOR": "fog-green",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_25.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "28",
+    "NAME": "everyday-mini-backpack",
+    "COLOR": "raspberry-pink",
+    "PRICE": 69.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_27.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "29",
+    "NAME": "everyday-holdall-large",
+    "COLOR": "fog-green",
+    "PRICE": 54.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_29.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "30",
+    "NAME": "quilted-yoga-tote",
+    "COLOR": "cool-brown",
+    "PRICE": 44.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_31.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "31",
+    "NAME": "medium-everyday-holdall",
+    "COLOR": "raspberry-pink",
+    "PRICE": 39.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_33.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "32",
+    "NAME": "sharkhead-gymsack",
+    "COLOR": "black",
+    "PRICE": 59.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_35.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "33",
+    "NAME": "everyday-waist-pack",
+    "COLOR": "lemonade-pink",
+    "PRICE": 34.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_37.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "34",
+    "NAME": "quilted-yoga-tote",
+    "COLOR": "light-pink",
+    "PRICE": 24.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_39.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "35",
+    "NAME": "sharkhead-backpack",
+    "COLOR": "core-olive",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_41.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "36",
+    "NAME": "everyday-tote",
+    "COLOR": "fog-green",
+    "PRICE": 69.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_43.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "37",
+    "NAME": "sharkhead-gymsack",
+    "COLOR": "core-olive",
+    "PRICE": 54.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_45.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "38",
+    "NAME": "everyday-wash-bag",
+    "COLOR": "fog-green",
+    "PRICE": 44.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_47.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "39",
+    "NAME": "everyday-mini-holdall",
+    "COLOR": "light-grey",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_49.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "40",
+    "NAME": "medium-everyday-holdall",
+    "COLOR": "light-pink",
+    "PRICE": 39.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_51.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "41",
+    "NAME": "everyday-wash-bag",
+    "COLOR": "light-pink",
+    "PRICE": 59.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_53.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "42",
+    "NAME": "everyday-mini-holdall",
+    "COLOR": "raspberry-pink",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_55.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "43",
+    "NAME": "quilted-yoga-tote",
+    "COLOR": "Red",
+    "PRICE": 44.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_57.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "44",
+    "NAME": "medium-everyday-holdall",
+    "COLOR": "black",
+    "PRICE": 34.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_59.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "45",
+    "NAME": "bold-holdall",
+    "COLOR": "black",
+    "PRICE": 59.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_61.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "46",
+    "NAME": "lifestyle-backpack",
+    "COLOR": "onyx-grey",
+    "PRICE": 64.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_63.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "47",
+    "NAME": "everyday-holdall-",
+    "COLOR": "light grey",
+    "PRICE": 74.99,
+    "SIZE": "large",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_65.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "48",
+    "NAME": "everyday-holdall",
+    "COLOR": "black",
+    "PRICE": 64.99,
+    "SIZE": "Medium",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_67.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "49",
+    "NAME": "premium-lifestyle-backpack",
+    "DESCRIPTION": "A casual tote bag for everyday use.",
+    "COLOR": "light-olive-green",
+    "PRICE": 49.99,
+    "SIZE": "1 size",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_69.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+  {
+    "ID": "50",
+    "NAME": "Stylish Backpack",
+    "DESCRIPTION": "A stylish backpack for a fashionable look.",
+    "COLOR": "Gray",
+    "PRICE": 54.99,
+    "SIZE": "Medium",
+    "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_71.webp",
+    "CATEGORY": "accessories",
+    "NESTED-CATEGORY": "bags"
+  },
+
+
+
+
+
+  
+     { "ID": "51",
+      "NAME": "Stylish Backpack",
+      "DESCRIPTION": "A stylish backpack for a trendy look.",
+      "COLOR": "Brown",
+      "PRICE": 54.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_73.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
     },
-    {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/12.webp"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/2.webp"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/3.webp"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/4.webp"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/5.webp"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/6.webp"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_101.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_103.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_105.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_109.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_111.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_113.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_119.web"
-      },
-      {   
-        "id": 2,
-        "name": "Product 1",
-        "description": "Description for Product 1",
-        "color": "Red",
-        "category": "Men",
-        "price": 29.99,
-        "size": "M",
-        "image": "/All_Images/categories_images/accessories/bags/image_103.web"
-      }
-      
-  ]
+    {
+      "ID": "52",
+      "NAME": "Leather Crossbody Bag",
+      "DESCRIPTION": "A classic leather crossbody bag for timeless elegance.",
+      "COLOR": "Black",
+      "PRICE": 64.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_75.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "53",
+      "NAME": "Modern Messenger Bag",
+      "DESCRIPTION": "A modern messenger bag for a sleek look.",
+      "COLOR": "Green",
+      "PRICE": 49.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_77.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "54",
+      "NAME": "Sleek Shoulder Bag",
+      "DESCRIPTION": "A sleek shoulder bag for a stylish look.",
+      "COLOR": "Blue",
+      "PRICE": 39.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_79.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "55",
+      "NAME": "Urban Tote Bag",
+      "DESCRIPTION": "An urban-style tote bag for city life.",
+      "COLOR": "Red",
+      "PRICE": 44.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_81.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "56",
+      "NAME": "Designer Backpack",
+      "DESCRIPTION": "A designer backpack for a touch of luxury.",
+      "COLOR": "Gray",
+      "PRICE": 74.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_83.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "57",
+      "NAME": "Classic Clutch",
+      "DESCRIPTION": "A classic clutch purse for timeless elegance.",
+      "COLOR": "Brown",
+      "PRICE": 29.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_85.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "58",
+      "NAME": "Fashionable Backpack",
+      "DESCRIPTION": "A fashionable backpack for a trendy look.",
+      "COLOR": "Black",
+      "PRICE": 59.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_87.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "59",
+      "NAME": "Weekender Duffel",
+      "DESCRIPTION": "A spacious weekender duffel bag for getaways.",
+      "COLOR": "Green",
+      "PRICE": 64.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_89.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "60",
+      "NAME": "Chic Tote Bag",
+      "DESCRIPTION": "A chic tote bag for a fashionable look.",
+      "COLOR": "Blue",
+      "PRICE": 44.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_91.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "61",
+      "NAME": "Casual Clutch Purse",
+      "DESCRIPTION": "A casual clutch purse for relaxed outings.",
+      "COLOR": "Red",
+      "PRICE": 24.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_93.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "62",
+      "NAME": "Urban Messenger Bag",
+      "DESCRIPTION": "An urban-style messenger bag for city life.",
+      "COLOR": "Gray",
+      "PRICE": 49.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_95.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "63",
+      "NAME": "Stylish Laptop Tote",
+      "DESCRIPTION": "A stylish laptop tote bag for tech-savvy individuals.",
+      "COLOR": "Brown",
+      "PRICE": 59.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_97.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "64",
+      "NAME": "Designer Sling Bag",
+      "DESCRIPTION": "A designer sling bag for a touch of luxury.",
+      "COLOR": "Black",
+      "PRICE": 69.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/bags/image_99.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "bags"
+    },
+    {
+      "ID": "65",
+      "NAME": "Weekender Backpack",
+      "DESCRIPTION": "A spacious weekender backpack for getaways.",
+      "COLOR": "Green",
+      "PRICE": 54.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_14.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "66",
+      "NAME": "Modern Gym Bag",
+      "DESCRIPTION": "A modern gym bag for fitness enthusiasts.",
+      "COLOR": "Black",
+      "PRICE": 34.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_15.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "67",
+      "NAME": "Sports Duffle",
+      "DESCRIPTION": "A sports duffle bag for athletes on the go.",
+      "COLOR": "Blue",
+      "PRICE": 39.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_17.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "68",
+      "NAME": "Outdoor Hiking Backpack",
+      "DESCRIPTION": "An outdoor hiking backpack for adventurers.",
+      "COLOR": "Gray",
+      "PRICE": 59.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_19.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "69",
+      "NAME": "Compact Gym Bag",
+      "DESCRIPTION": "A compact gym bag for quick workouts.",
+      "COLOR": "Green",
+      "PRICE": 29.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_21.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "70",
+      "NAME": "Fitness Backpack",
+      "DESCRIPTION": "A fitness backpack for active individuals.",
+      "COLOR": "Black",
+      "PRICE": 49.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_23.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "71",
+      "NAME": "Sleek Gym Duffle",
+      "DESCRIPTION": "A sleek gym duffle bag for style-conscious fitness enthusiasts.",
+      "COLOR": "Blue",
+      "PRICE": 39.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_25.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "72",
+      "NAME": "Tactical Backpack",
+      "DESCRIPTION": "A tactical backpack for outdoor adventures.",
+      "COLOR": "Gray",
+      "PRICE": 64.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_27.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "73",
+      "NAME": "Yoga Mat Bag",
+      "DESCRIPTION": "A yoga mat bag for yogis on the move.",
+      "COLOR": "Black",
+      "PRICE": 19.99,
+      "SIZE": "Small",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/equipment/image_29.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "equipment"
+    },
+    {
+      "ID": "74",
+      "NAME": "Casual Flip Flops",
+      "DESCRIPTION": "Casual flip flops for relaxed outings.",
+      "COLOR": "Blue",
+      "PRICE": 14.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_14.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "75",
+      "NAME": "Sporty Sneakers",
+      "DESCRIPTION": "Sporty sneakers for active individuals.",
+      "COLOR": "Black",
+      "PRICE": 39.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_15.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "76",
+      "NAME": "Classic Loafers",
+      "DESCRIPTION": "Classic loafers for timeless style.",
+      "COLOR": "Brown",
+      "PRICE": 29.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_17.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "77",
+      "NAME": "Outdoor Hiking Boots",
+      "DESCRIPTION": "Outdoor hiking boots for adventurers.",
+      "COLOR": "Gray",
+      "PRICE": 49.99,
+      "SIZE": "Large",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_19.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "78",
+      "NAME": "Casual Canvas Shoes",
+      "DESCRIPTION": "Casual canvas shoes for everyday comfort.",
+      "COLOR": "Green",
+      "PRICE": 24.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_21.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "79",
+      "NAME": "Stylish High Heels",
+      "DESCRIPTION": "Stylish high heels for a glamorous look.",
+      "COLOR": "Black",
+      "PRICE": 59.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_23.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "80",
+      "NAME": "Athletic Running Shoes",
+      "DESCRIPTION": "Athletic running shoes for fitness enthusiasts.",
+      "COLOR": "Blue",
+      "PRICE": 44.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_25.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "81",
+      "NAME": "Classic Sandals",
+      "DESCRIPTION": "Classic sandals for warm-weather comfort.",
+      "COLOR": "Gray",
+      "PRICE": 19.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_27.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "82",
+      "NAME": "Fashionable Espadrilles",
+      "DESCRIPTION": "Fashionable espadrilles for a trendy look.",
+      "COLOR": "Green",
+      "PRICE": 34.99,
+      "SIZE": "Medium",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/footwear/image_29.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "footwear"
+    },
+    {
+      "ID": "83",
+      "NAME": "Casual Beanie",
+      "DESCRIPTION": "A casual beanie for a relaxed style.",
+      "COLOR": "Black",
+      "PRICE": 9.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_14.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "84",
+      "NAME": "Stylish Fedora",
+      "DESCRIPTION": "A stylish fedora hat for a touch of elegance.",
+      "COLOR": "Brown",
+      "PRICE": 19.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_15.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "85",
+      "NAME": "Sporty Baseball Cap",
+      "DESCRIPTION": "A sporty baseball cap for a casual look.",
+      "COLOR": "Blue",
+      "PRICE": 14.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_17.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "86",
+      "NAME": "Classic Trilby Hat",
+      "DESCRIPTION": "A classic trilby hat for a timeless style.",
+      "COLOR": "Gray",
+      "PRICE": 24.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_19.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "87",
+      "NAME": "Urban Snapback Cap",
+      "DESCRIPTION": "An urban-style snapback cap for city life.",
+      "COLOR": "Green",
+      "PRICE": 16.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_21.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "88",
+      "NAME": "Stylish Bucket Hat",
+      "DESCRIPTION": "A stylish bucket hat for a trendy look.",
+      "COLOR": "Black",
+      "PRICE": 18.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_23.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "89",
+      "NAME": "Outdoor Sun Hat",
+      "DESCRIPTION": "An outdoor sun hat for protection from the elements.",
+      "COLOR": "Brown",
+      "PRICE": 14.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_25.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "90",
+      "NAME": "Classic Scarf",
+      "DESCRIPTION": "A classic scarf for warmth and style.",
+      "COLOR": "Blue",
+      "PRICE": 12.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_27.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "91",
+      "NAME": "Cozy Winter Beanie",
+      "DESCRIPTION": "A cozy winter beanie for cold days.",
+      "COLOR": "Gray",
+      "PRICE": 9.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/headwear/image_29.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "headwear"
+    },
+    {
+      "ID": "92",
+      "NAME": "Comfy Ankle Socks",
+      "DESCRIPTION": "Comfy ankle socks for everyday wear.",
+      "COLOR": "Black",
+      "PRICE": 6.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/socks/1.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "socks"
+    },
+    {
+      "ID": "93",
+      "NAME": "Sporty Crew Socks",
+      "DESCRIPTION": "Sporty crew socks for active individuals.",
+      "COLOR": "White",
+      "PRICE": 7.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/socks/2.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "socks"
+    },
+    {
+      "ID": "94",
+      "NAME": "Casual Low-Cut Socks",
+      "DESCRIPTION": "Casual low-cut socks for relaxed outings.",
+      "COLOR": "Gray",
+      "PRICE": 5.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/socks/3.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "socks"
+    },
+    {
+      "ID": "95",
+      "NAME": "Cozy Wool Socks",
+      "DESCRIPTION": "Cozy wool socks for warmth and comfort.",
+      "COLOR": "Brown",
+      "PRICE": 8.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/socks/4.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "socks"
+    },
+    {
+      "ID": "96",
+      "NAME": "Athletic Compression Socks",
+      "DESCRIPTION": "Athletic compression socks for improved performance.",
+      "COLOR": "Black",
+      "PRICE": 9.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/socks/5.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "socks"
+    },
+    {
+      "ID": "97",
+      "NAME": "Stylish Sunglasses",
+      "DESCRIPTION": "Stylish sunglasses for eye protection and fashion.",
+      "COLOR": "Blue",
+      "PRICE": 19.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/sunglasses/1.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "sunglasses"
+    },
+    {
+      "ID": "98",
+      "NAME": "Classic Aviators",
+      "DESCRIPTION": "Classic aviator sunglasses for a timeless look.",
+      "COLOR": "Black",
+      "PRICE": 24.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/sunglasses/2.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "sunglasses"
+    },
+    {
+      "ID": "99",
+      "NAME": "Sporty Wraparound Sunglasses",
+      "DESCRIPTION": "Sporty wraparound sunglasses for active individuals.",
+      "COLOR": "Gray",
+      "PRICE": 14.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/sunglasses/3.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "sunglasses"
+    },
+    {
+      "ID": "100",
+      "NAME": "Fashionable Cat-Eye Sunglasses",
+      "DESCRIPTION": "Fashionable cat-eye sunglasses for a trendy look.",
+      "COLOR": "Brown",
+      "PRICE": 18.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/sunglasses/4.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "sunglasses"
+    },
+    {
+      "ID": "101",
+      "NAME": "Outdoor Polarized Sunglasses",
+      "DESCRIPTION": "Outdoor polarized sunglasses for glare reduction.",
+      "COLOR": "Green",
+      "PRICE": 29.99,
+      "SIZE": "One Size",
+      "IMAGEPATH": "/All_Images/categories_images/accessories/sunglasses/5.webp",
+      "CATEGORY": "accessories",
+      "NESTED-CATEGORY": "sunglasses"
+    },
+  
   
 
+    
+        {
+            "ID": "102",
+            "NAME": "Casual No-Show Socks",
+            "DESCRIPTION": "Casual no-show socks for discreet comfort.",
+            "COLOR": "White",
+            "PRICE": 5.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a12.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "103",
+            "NAME": "Warm Fuzzy Socks",
+            "DESCRIPTION": "Warm fuzzy socks for cozy evenings.",
+            "COLOR": "Gray",
+            "PRICE": 6.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a13.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "104",
+            "NAME": "Colorful Crew Socks",
+            "DESCRIPTION": "Colorful crew socks for a vibrant look.",
+            "COLOR": "Black",
+            "PRICE": 7.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a2.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "105",
+            "NAME": "Stretchy Athletic Socks",
+            "DESCRIPTION": "Stretchy athletic socks for active individuals.",
+            "COLOR": "White",
+            "PRICE": 8.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a3.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "106",
+            "NAME": "Casual Dress Socks",
+            "DESCRIPTION": "Casual dress socks for a polished look.",
+            "COLOR": "Gray",
+            "PRICE": 6.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a4.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "107",
+            "NAME": "Cozy Cabin Socks",
+            "DESCRIPTION": "Cozy cabin socks for a rustic feel.",
+            "COLOR": "Black",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a5.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "108",
+            "NAME": "Patterned Ankle Socks",
+            "DESCRIPTION": "Patterned ankle socks for a touch of style.",
+            "COLOR": "White",
+            "PRICE": 7.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a6.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "109",
+            "NAME": "Sporty Quarter Socks",
+            "DESCRIPTION": "Sporty quarter socks for athletic activities.",
+            "COLOR": "Gray",
+            "PRICE": 8.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a7.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "110",
+            "NAME": "Cozy Fleece Socks",
+            "DESCRIPTION": "Cozy fleece socks for warmth and comfort.",
+            "COLOR": "Black",
+            "PRICE": 10.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a8.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "111",
+            "NAME": "Classic Dress Socks",
+            "DESCRIPTION": "Classic dress socks for a timeless look.",
+            "COLOR": "White",
+            "PRICE": 6.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/socks/a9.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "socks"
+        },
+        {
+            "ID": "112",
+            "NAME": "Sporty Wristband",
+            "DESCRIPTION": "A sporty wristband for active individuals.",
+            "COLOR": "Blue",
+            "PRICE": 5.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_14.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "113",
+            "NAME": "Moisture-Wicking Headband",
+            "DESCRIPTION": "A moisture-wicking headband for workouts.",
+            "COLOR": "Black",
+            "PRICE": 4.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_15.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "114",
+            "NAME": "Reflective Armband",
+            "DESCRIPTION": "A reflective armband for visibility during night runs.",
+            "COLOR": "Green",
+            "PRICE": 6.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_17.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "115",
+            "NAME": "Compression Arm Sleeve",
+            "DESCRIPTION": "A compression arm sleeve for muscle support.",
+            "COLOR": "Gray",
+            "PRICE": 7.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_19.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "116",
+            "NAME": "Running Belt",
+            "DESCRIPTION": "A running belt for carrying essentials while jogging.",
+            "COLOR": "Blue",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_21.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "117",
+            "NAME": "Wrist Support Brace",
+            "DESCRIPTION": "A wrist support brace for injury prevention.",
+            "COLOR": "Black",
+            "PRICE": 8.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_23.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "118",
+            "NAME": "Neoprene Knee Sleeve",
+            "DESCRIPTION": "A neoprene knee sleeve for joint support.",
+            "COLOR": "Green",
+            "PRICE": 10.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_25.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "119",
+            "NAME": "Ankle Support Brace",
+            "DESCRIPTION": "An ankle support brace for stability.",
+            "COLOR": "Gray",
+            "PRICE": 7.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_27.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "120",
+            "NAME": "Jump Rope",
+            "DESCRIPTION": "A jump rope for cardiovascular workouts.",
+            "COLOR": "Blue",
+            "PRICE": 5.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/sportswear/image_29.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "sportswear"
+        },
+        {
+            "ID": "121",
+            "NAME": "Basic Yoga Mat",
+            "DESCRIPTION": "A basic yoga mat for yoga and stretching exercises.",
+            "COLOR": "Black",
+            "PRICE": 12.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_14.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "122",
+            "NAME": "Eco-Friendly Cork Yoga Mat",
+            "DESCRIPTION": "An eco-friendly cork yoga mat for yoga enthusiasts.",
+            "COLOR": "Brown",
+            "PRICE": 24.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_15.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "123",
+            "NAME": "Non-Slip Yoga Towel",
+            "DESCRIPTION": "A non-slip yoga towel for added grip during practice.",
+            "COLOR": "Gray",
+            "PRICE": 14.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_17.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "124",
+            "NAME": "Yoga Block Set",
+            "DESCRIPTION": "A set of yoga blocks for support and balance.",
+            "COLOR": "Green",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_19.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "125",
+            "NAME": "Yoga Strap",
+            "DESCRIPTION": "A yoga strap for stretching and flexibility.",
+            "COLOR": "Black",
+            "PRICE": 7.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_21.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "126",
+            "NAME": "Meditation Cushion",
+            "DESCRIPTION": "A meditation cushion for comfortable meditation sessions.",
+            "COLOR": "Blue",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_23.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "127",
+            "NAME": "Yoga Wheel",
+            "DESCRIPTION": "A yoga wheel for advanced yoga poses.",
+            "COLOR": "Gray",
+            "PRICE": 16.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_25.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "128",
+            "NAME": "Resistance Bands",
+            "DESCRIPTION": "Resistance bands for strength training.",
+            "COLOR": "Green",
+            "PRICE": 11.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_27.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "129",
+            "NAME": "Yoga Ball",
+            "DESCRIPTION": "A yoga ball for stability and core exercises.",
+            "COLOR": "Black",
+            "PRICE": 13.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_29.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "130",
+            "NAME": "Durable Yoga Mat Bag",
+            "DESCRIPTION": "A durable yoga mat bag for easy transport.",
+            "COLOR": "Blue",
+            "PRICE": 8.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/accessories/yoga/image_30.webp",
+            "CATEGORY": "accessories",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "131",
+            "NAME": "Retro Sunglasses",
+            "DESCRIPTION": "Retro sunglasses for a vintage look.",
+            "COLOR": "Black",
+            "PRICE": 12.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_14.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "132",
+            "NAME": "Aviator Sunglasses",
+            "DESCRIPTION": "Aviator sunglasses for a classic style.",
+            "COLOR": "Brown",
+            "PRICE": 14.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_15.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "133",
+            "NAME": "Sporty Wraparound Sunglasses",
+            "DESCRIPTION": "Sporty wraparound sunglasses for active individuals.",
+            "COLOR": "Gray",
+            "PRICE": 16.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_17.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "134",
+            "NAME": "Wayfarer Sunglasses",
+            "DESCRIPTION": "Wayfarer sunglasses for a trendy look.",
+            "COLOR": "Green",
+            "PRICE": 12.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_19.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "135",
+            "NAME": "Polarized Sunglasses",
+            "DESCRIPTION": "Polarized sunglasses for glare reduction.",
+            "COLOR": "Black",
+            "PRICE": 18.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_20.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "136",
+            "NAME": "Oversized Sunglasses",
+            "DESCRIPTION": "Oversized sunglasses for a bold fashion statement.",
+            "COLOR": "Brown",
+            "PRICE": 15.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_21.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "137",
+            "NAME": "Cat-Eye Sunglasses",
+            "DESCRIPTION": "Cat-eye sunglasses for a chic and feminine look.",
+            "COLOR": "Gray",
+            "PRICE": 13.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_22.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "138",
+            "NAME": "Classic Reading Glasses",
+            "DESCRIPTION": "Classic reading glasses for clear vision.",
+            "COLOR": "Green",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_23.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "139",
+            "NAME": "Sleek Metal Frame Glasses",
+            "DESCRIPTION": "Sleek metal frame glasses for a modern look.",
+            "COLOR": "Black",
+            "PRICE": 10.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_24.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "140",
+            "NAME": "Trendy Clear Lens Glasses",
+            "DESCRIPTION": "Trendy clear lens glasses for a stylish touch.",
+            "COLOR": "Brown",
+            "PRICE": 11.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/eyewear/image_25.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "eyewear"
+        },
+        {
+            "ID": "141",
+            "NAME": "Classic Leather Belt",
+            "DESCRIPTION": "A classic leather belt for a timeless style.",
+            "COLOR": "Black",
+            "PRICE": 19.99,
+            "SIZE": "Medium",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_14.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "142",
+            "NAME": "Stylish Canvas Belt",
+            "DESCRIPTION": "A stylish canvas belt for a casual look.",
+            "COLOR": "Brown",
+            "PRICE": 14.99,
+            "SIZE": "Medium",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_15.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "143",
+            "NAME": "Formal Dress Belt",
+            "DESCRIPTION": "A formal dress belt for special occasions.",
+            "COLOR": "Gray",
+            "PRICE": 24.99,
+            "SIZE": "Medium",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_16.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "144",
+            "NAME": "Classic Leather Wallet",
+            "DESCRIPTION": "A classic leather wallet for essential storage.",
+            "COLOR": "Green",
+            "PRICE": 18.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_17.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "145",
+            "NAME": "Sleek Money Clip",
+            "DESCRIPTION": "A sleek money clip for minimalist storage.",
+            "COLOR": "Black",
+            "PRICE": 12.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_18.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "146",
+            "NAME": "Casual Canvas Backpack",
+            "DESCRIPTION": "A casual canvas backpack for everyday use.",
+            "COLOR": "Blue",
+            "PRICE": 29.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_19.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "147",
+            "NAME": "Stylish Leather Backpack",
+            "DESCRIPTION": "A stylish leather backpack for a sophisticated look.",
+            "COLOR": "Brown",
+            "PRICE": 39.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_20.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "148",
+            "NAME": "Sporty Gym Bag",
+            "DESCRIPTION": "A sporty gym bag for workout essentials.",
+            "COLOR": "Gray",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/accessories/image_21.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "accessories"
+        },
+        {
+            "ID": "149",
+            "NAME": "Classic Watch",
+            "DESCRIPTION": "A classic watch for a timeless accessory.",
+            "COLOR": "Black",
+            "PRICE": 29.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/watches/image_14.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "watches"
+        },
+        {
+            "ID": "150",
+            "NAME": "Sporty Digital Watch",
+            "DESCRIPTION": "A sporty digital watch with multiple functions.",
+            "COLOR": "Brown",
+            "PRICE": 39.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/watches/image_15.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "watches"
+        },
+        {
+            "ID": "151",
+            "NAME": "Smart Fitness Watch",
+            "DESCRIPTION": "A smart fitness watch for tracking health and workouts.",
+            "COLOR": "Gray",
+            "PRICE": 49.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/watches/image_16.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "watches"
+        },
+        {
+            "ID": "152",
+            "NAME": "Luxury Analog Watch",
+            "DESCRIPTION": "A luxury analog watch for a sophisticated look.",
+            "COLOR": "Green",
+            "PRICE": 89.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/watches/image_17.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "watches"
+        },
+        {
+            "ID": "153",
+            "NAME": "Casual Bracelet Watch",
+            "DESCRIPTION": "A casual bracelet watch for everyday wear.",
+            "COLOR": "Black",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/watches/image_18.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "watches"
+        },
+        {
+            "ID": "154",
+            "NAME": "Retro Pocket Watch",
+            "DESCRIPTION": "A retro pocket watch for vintage charm.",
+            "COLOR": "Blue",
+            "PRICE": 24.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/apparel/watches/image_19.webp",
+            "CATEGORY": "apparel",
+            "NESTED-CATEGORY": "watches"
+        },
+        {
+            "ID": "155",
+            "NAME": "Wireless Bluetooth Earbuds",
+            "DESCRIPTION": "Wireless Bluetooth earbuds for on-the-go music.",
+            "COLOR": "White",
+            "PRICE": 34.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/audio/image_14.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "audio"
+        },
+        {
+            "ID": "156",
+            "NAME": "Over-Ear Noise-Canceling Headphones",
+            "DESCRIPTION": "Over-ear noise-canceling headphones for immersive audio.",
+            "COLOR": "Black",
+            "PRICE": 64.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/audio/image_15.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "audio"
+        },
+        {
+            "ID": "157",
+            "NAME": "Portable Bluetooth Speaker",
+            "DESCRIPTION": "A portable Bluetooth speaker for music on the go.",
+            "COLOR": "Gray",
+            "PRICE": 29.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/audio/image_16.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "audio"
+        },
+        {
+            "ID": "158",
+            "NAME": "Wired In-Ear Earphones",
+            "DESCRIPTION": "Wired in-ear earphones for reliable audio.",
+            "COLOR": "Green",
+            "PRICE": 14.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/audio/image_17.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "audio"
+        },
+        {
+            "ID": "159",
+            "NAME": "Gaming Headset",
+            "DESCRIPTION": "A gaming headset for an immersive gaming experience.",
+            "COLOR": "Black",
+            "PRICE": 49.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/audio/image_18.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "audio"
+        },
+        {
+            "ID": "160",
+            "NAME": "Wireless Charging Pad",
+            "DESCRIPTION": "A wireless charging pad for convenient device charging.",
+            "COLOR": "Blue",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/chargers/image_14.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "chargers"
+        },
+        {
+            "ID": "161",
+            "NAME": "Fast Charging USB-C Cable",
+            "DESCRIPTION": "A fast charging USB-C cable for quick device charging.",
+            "COLOR": "Black",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/chargers/image_15.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "chargers"
+        },
+        {
+            "ID": "162",
+            "NAME": "Travel Adapter",
+            "DESCRIPTION": "A travel adapter for international charging.",
+            "COLOR": "Gray",
+            "PRICE": 12.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/chargers/image_16.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "chargers"
+        },
+        {
+            "ID": "163",
+            "NAME": "Power Bank",
+            "DESCRIPTION": "A power bank for charging devices on the go.",
+            "COLOR": "Green",
+            "PRICE": 24.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/chargers/image_17.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "chargers"
+        },
+        {
+            "ID": "164",
+            "NAME": "Wireless Mouse",
+            "DESCRIPTION": "A wireless mouse for convenient computer navigation.",
+            "COLOR": "Black",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/computers/image_14.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "computers"
+        },
+        {
+            "ID": "165",
+            "NAME": "Mechanical Gaming Keyboard",
+            "DESCRIPTION": "A mechanical gaming keyboard for precise control.",
+            "COLOR": "Brown",
+            "PRICE": 49.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/computers/image_15.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "computers"
+        },
+        {
+            "ID": "166",
+            "NAME": "Laptop Sleeve",
+            "DESCRIPTION": "A laptop sleeve for protecting your laptop.",
+            "COLOR": "Gray",
+            "PRICE": 14.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/computers/image_16.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "computers"
+        },
+        {
+            "ID": "167",
+            "NAME": "Wireless Keyboard and Mouse Combo",
+            "DESCRIPTION": "A wireless keyboard and mouse combo for convenience.",
+            "COLOR": "Green",
+            "PRICE": 34.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/computers/image_17.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "computers"
+        },
+        {
+            "ID": "168",
+            "NAME": "External Hard Drive",
+            "DESCRIPTION": "An external hard drive for extra storage space.",
+            "COLOR": "Black",
+            "PRICE": 79.99,
+            "SIZE": "1TB",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/computers/image_18.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "computers"
+        },
+        {
+            "ID": "169",
+            "NAME": "Smartphone Car Mount",
+            "DESCRIPTION": "A smartphone car mount for hands-free use.",
+            "COLOR": "Black",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/mobile/image_14.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "mobile"
+        },
+        {
+            "ID": "170",
+            "NAME": "Portable Phone Charger",
+            "DESCRIPTION": "A portable phone charger for on-the-go power.",
+            "COLOR": "White",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/mobile/image_15.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "mobile"
+        },
+        {
+            "ID": "171",
+            "NAME": "Bluetooth Wireless Speaker",
+            "DESCRIPTION": "A Bluetooth wireless speaker for music on the move.",
+            "COLOR": "Gray",
+            "PRICE": 29.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/mobile/image_16.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "mobile"
+        },
+        {
+            "ID": "172",
+            "NAME": "Wireless Earbuds with Charging Case",
+            "DESCRIPTION": "Wireless earbuds with a charging case for extended use.",
+            "COLOR": "Green",
+            "PRICE": 39.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/mobile/image_17.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "mobile"
+        },
+        {
+            "ID": "173",
+            "NAME": "Camera Tripod",
+            "DESCRIPTION": "A camera tripod for stable photography and videography.",
+            "COLOR": "Black",
+            "PRICE": 24.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/photography/image_14.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "photography"
+        },
+        {
+            "ID": "174",
+            "NAME": "Camera Lens Kit",
+            "DESCRIPTION": "A camera lens kit for versatile photography.",
+            "COLOR": "Brown",
+            "PRICE": 34.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/photography/image_15.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "photography"
+        },
+        {
+            "ID": "175",
+            "NAME": "Drone with HD Camera",
+            "DESCRIPTION": "A drone with an HD camera for aerial photography and video.",
+            "COLOR": "Gray",
+            "PRICE": 199.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/photography/image_16.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "photography"
+        },
+        {
+            "ID": "176",
+            "NAME": "Digital Camera",
+            "DESCRIPTION": "A digital camera for high-quality photos.",
+            "COLOR": "Green",
+            "PRICE": 149.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/photography/image_17.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "photography"
+        },
+        {
+            "ID": "177",
+            "NAME": "Wireless Security Camera",
+            "DESCRIPTION": "A wireless security camera for home surveillance.",
+            "COLOR": "Black",
+            "PRICE": 89.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/photography/image_18.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "photography"
+        },
+        {
+            "ID": "178",
+            "NAME": "Smart Home Hub",
+            "DESCRIPTION": "A smart home hub for controlling connected devices.",
+            "COLOR": "Blue",
+            "PRICE": 49.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/smart-home/image_14.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "smart-home"
+        },
+        {
+            "ID": "179",
+            "NAME": "Smart Light Bulb",
+            "DESCRIPTION": "A smart light bulb for customizable lighting.",
+            "COLOR": "White",
+            "PRICE": 12.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/smart-home/image_15.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "smart-home"
+        },
+        {
+            "ID": "180",
+            "NAME": "Voice Assistant Speaker",
+            "DESCRIPTION": "A voice assistant speaker for hands-free control.",
+            "COLOR": "Gray",
+            "PRICE": 29.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/smart-home/image_16.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "smart-home"
+        },
+        {
+            "ID": "181",
+            "NAME": "Smart Thermostat",
+            "DESCRIPTION": "A smart thermostat for energy-efficient heating and cooling.",
+            "COLOR": "Green",
+            "PRICE": 49.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/smart-home/image_17.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "smart-home"
+        },
+        {
+            "ID": "182",
+            "NAME": "Wireless Security System",
+            "DESCRIPTION": "A wireless security system for home protection.",
+            "COLOR": "Black",
+            "PRICE": 199.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/electronics/smart-home/image_18.webp",
+            "CATEGORY": "electronics",
+            "NESTED-CATEGORY": "smart-home"
+        },
+        {
+            "ID": "183",
+            "NAME": "Outdoor Camping Tent",
+            "DESCRIPTION": "An outdoor camping tent for outdoor adventures.",
+            "COLOR": "Blue",
+            "PRICE": 79.99,
+            "SIZE": "4-Person",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/camping/image_14.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "camping"
+        },
+        {
+            "ID": "184",
+            "NAME": "Sleeping Bag",
+            "DESCRIPTION": "A sleeping bag for a comfortable night's sleep in the great outdoors.",
+            "COLOR": "Green",
+            "PRICE": 39.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/camping/image_15.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "camping"
+        },
+        {
+            "ID": "185",
+            "NAME": "Portable Camping Stove",
+            "DESCRIPTION": "A portable camping stove for cooking in the wilderness.",
+            "COLOR": "Gray",
+            "PRICE": 24.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/camping/image_16.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "camping"
+        },
+        {
+            "ID": "186",
+            "NAME": "Hiking Backpack",
+            "DESCRIPTION": "A hiking backpack for carrying gear on the trails.",
+            "COLOR": "Black",
+            "PRICE": 59.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/hiking/image_14.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "hiking"
+        },
+        {
+            "ID": "187",
+            "NAME": "Trekking Poles",
+            "DESCRIPTION": "Trekking poles for stability and support during hikes.",
+            "COLOR": "Brown",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/hiking/image_15.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "hiking"
+        },
+        {
+            "ID": "188",
+            "NAME": "Camping Hammock",
+            "DESCRIPTION": "A camping hammock for relaxing in nature.",
+            "COLOR": "Gray",
+            "PRICE": 29.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/hiking/image_16.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "hiking"
+        },
+        {
+            "ID": "189",
+            "NAME": "Fishing Rod and Reel Combo",
+            "DESCRIPTION": "A fishing rod and reel combo for angling adventures.",
+            "COLOR": "Green",
+            "PRICE": 49.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/fishing/image_14.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "fishing"
+        },
+        {
+            "ID": "190",
+            "NAME": "Camping Cookware Set",
+            "DESCRIPTION": "A camping cookware set for outdoor cooking.",
+            "COLOR": "Black",
+            "PRICE": 34.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/cooking/image_14.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "cooking"
+        },
+        {
+            "ID": "191",
+            "NAME": "Portable Folding Chair",
+            "DESCRIPTION": "A portable folding chair for comfortable outdoor seating.",
+            "COLOR": "Blue",
+            "PRICE": 14.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/camping/image_17.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "camping"
+        },
+        {
+            "ID": "192",
+            "NAME": "Insulated Cooler Bag",
+            "DESCRIPTION": "An insulated cooler bag for keeping drinks and food cold.",
+            "COLOR": "Green",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/camping/image_18.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "camping"
+        },
+        {
+            "ID": "193",
+            "NAME": "Outdoor First Aid Kit",
+            "DESCRIPTION": "An outdoor first aid kit for emergencies in the wilderness.",
+            "COLOR": "Red",
+            "PRICE": 9.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/outdoors/camping/image_19.webp",
+            "CATEGORY": "outdoors",
+            "NESTED-CATEGORY": "camping"
+        },
+        {
+            "ID": "194",
+            "NAME": "Professional Golf Clubs",
+            "DESCRIPTION": "Professional golf clubs for avid golfers.",
+            "COLOR": "Black",
+            "PRICE": 399.99,
+            "SIZE": "Men's",
+            "IMAGEPATH": "/All_Images/categories_images/sports/golf/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "golf"
+        },
+        {
+            "ID": "195",
+            "NAME": "Tennis Racket",
+            "DESCRIPTION": "A tennis racket for tennis enthusiasts.",
+            "COLOR": "Blue",
+            "PRICE": 49.99,
+            "SIZE": "Adult",
+            "IMAGEPATH": "/All_Images/categories_images/sports/tennis/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "tennis"
+        },
+        {
+            "ID": "196",
+            "NAME": "Basketball",
+            "DESCRIPTION": "A basketball for pick-up games and practice.",
+            "COLOR": "Orange",
+            "PRICE": 19.99,
+            "SIZE": "Official Size",
+            "IMAGEPATH": "/All_Images/categories_images/sports/basketball/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "basketball"
+        },
+        {
+            "ID": "197",
+            "NAME": "Soccer Ball",
+            "DESCRIPTION": "A soccer ball for soccer enthusiasts.",
+            "COLOR": "White",
+            "PRICE": 29.99,
+            "SIZE": "Official Size",
+            "IMAGEPATH": "/All_Images/categories_images/sports/soccer/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "soccer"
+        },
+        {
+            "ID": "198",
+            "NAME": "Running Shoes",
+            "DESCRIPTION": "Running shoes for runners of all levels.",
+            "COLOR": "Black",
+            "PRICE": 79.99,
+            "SIZE": "Men's 10",
+            "IMAGEPATH": "/All_Images/categories_images/sports/running/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "running"
+        },
+        {
+            "ID": "199",
+            "NAME": "Yoga Mat",
+            "DESCRIPTION": "A yoga mat for yoga and fitness enthusiasts.",
+            "COLOR": "Purple",
+            "PRICE": 19.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/sports/yoga/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "yoga"
+        },
+        {
+            "ID": "200",
+            "NAME": "Boxing Gloves",
+            "DESCRIPTION": "Boxing gloves for boxing and martial arts training.",
+            "COLOR": "Red",
+            "PRICE": 34.99,
+            "SIZE": "One Size",
+            "IMAGEPATH": "/All_Images/categories_images/sports/boxing/image_14.webp",
+            "CATEGORY": "sports",
+            "NESTED-CATEGORY": "boxing"
+        }
 
-/All_Images/categories_images/accessories/bags/image_121.webp
-/All_Images/categories_images/accessories/bags/image_123.webp
-/All_Images/categories_images/accessories/bags/image_125.webp
-/All_Images/categories_images/accessories/bags/image_127.webp
-/All_Images/categories_images/accessories/bags/image_129.webp
-/All_Images/categories_images/accessories/bags/image_131.webp
-/All_Images/categories_images/accessories/bags/image_14.webp
-/All_Images/categories_images/accessories/bags/image_15.webp
-/All_Images/categories_images/accessories/bags/image_17.webp
-/All_Images/categories_images/accessories/bags/image_19.webp
-/All_Images/categories_images/accessories/bags/image_21.webp
-/All_Images/categories_images/accessories/bags/image_23.webp
-/All_Images/categories_images/accessories/bags/image_25.webp
-/All_Images/categories_images/accessories/bags/image_27.webp
-/All_Images/categories_images/accessories/bags/image_29.webp
-/All_Images/categories_images/accessories/bags/image_31.webp
-/All_Images/categories_images/accessories/bags/image_33.webp
-/All_Images/categories_images/accessories/bags/image_35.webp
-/All_Images/categories_images/accessories/bags/image_37.webp
-/All_Images/categories_images/accessories/bags/image_39.webp
-/All_Images/categories_images/accessories/bags/image_41.webp
-/All_Images/categories_images/accessories/bags/image_43.webp
-/All_Images/categories_images/accessories/bags/image_45.webp
-/All_Images/categories_images/accessories/bags/image_47.webp
-/All_Images/categories_images/accessories/bags/image_49.webp
-/All_Images/categories_images/accessories/bags/image_51.webp
-/All_Images/categories_images/accessories/bags/image_53.webp
-/All_Images/categories_images/accessories/bags/image_55.webp
-/All_Images/categories_images/accessories/bags/image_57.webp
-/All_Images/categories_images/accessories/bags/image_59.webp
-/All_Images/categories_images/accessories/bags/image_61.webp
-/All_Images/categories_images/accessories/bags/image_63.webp
-/All_Images/categories_images/accessories/bags/image_65.webp
-/All_Images/categories_images/accessories/bags/image_67.webp
-/All_Images/categories_images/accessories/bags/image_69.webp
-/All_Images/categories_images/accessories/bags/image_71.webp
-/All_Images/categories_images/accessories/bags/image_73.webp
-/All_Images/categories_images/accessories/bags/image_75.webp
-/All_Images/categories_images/accessories/bags/image_77.webp
-/All_Images/categories_images/accessories/bags/image_79.webp
-/All_Images/categories_images/accessories/bags/image_81.webp
-/All_Images/categories_images/accessories/bags/image_83.webp
-/All_Images/categories_images/accessories/bags/image_85.webp
-/All_Images/categories_images/accessories/bags/image_87.webp
-/All_Images/categories_images/accessories/bags/image_89.webp
-/All_Images/categories_images/accessories/bags/image_91.webp
-/All_Images/categories_images/accessories/bags/image_93.webp
-/All_Images/categories_images/accessories/bags/image_95.webp
-/All_Images/categories_images/accessories/bags/image_97.webp
-/All_Images/categories_images/accessories/bags/image_99.webp
+]
