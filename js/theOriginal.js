@@ -446,7 +446,17 @@ function addActiveNav(ele) {
 };
 
 // #############################################################
+// start placeholder replacer
 
+// let allTheImg = document.querySelectorAll("img");
+
+// allTheImg.forEach((e) => {
+//   e.addEventListener("error", () => {
+//     e.src = "All_Images/svg/white.svg"
+//   })
+
+// })
+// end placeholder replacer
 // #############################################################
 
 // #############################################################
@@ -2521,8 +2531,6 @@ let ds = [
   "/All_Images/categories_images/accessories/headwear/image_71.webp"]
 
 // #############################################################
-// #############################################################
-// #############################################################
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -2786,7 +2794,7 @@ function createApi() {
 
       allImgs = [...bagsImages, ...equipmentImages, ...footWearImages, ...HeadWearImages, ...socksImages];
 
-      console.log(...allImgs)
+      // console.log(...allImgs)
     })
 
 
@@ -2821,14 +2829,15 @@ async function fetchApi() {
     throw error;
   }
 }
- 
+
 fetchApi()
   .then(data => {
 
     // checkApi(data, ds)
     findIdByPath(data, ds)
-    const ids = findIdByPath(ds, data);
-    console.log(ids)
+    // const ids = findIdByPath(ds, data);
+    console.log(data)
+    renderApiImage(data)
   })
   .catch(error => {
     console.error(error);
@@ -2863,15 +2872,33 @@ function findIdByPath(ds, jsonData) {
       if (obj.IMAGEPATH === path) {
         // If the path exists in the JSON object, push the ID to the result array
         result.push(obj.ID);
-        
+
         break; // No need to continue searching for this path
       }
     }
   }
-// console.log(result.length)
+  // console.log(result.length)
   return result;
 }
 
+function renderApiImage(apiData) {
+  // IMAGEPATH
+  let apiObj = apiData[2]
+  let apiImage = apiObj.IMAGEPATH
+  // console.log(apiImage)
+  let element = document.querySelector(".product.left");
+  let elementImg = element.querySelector(".img img");
+
+  document.addEventListener("keydown", (e) => {
+    console.log(e.code)
+    if (e.code === "KeyC") {
+
+      elementImg.src = apiImage
+    }
+  })
+
+
+}
 // end fetch api
 
 
